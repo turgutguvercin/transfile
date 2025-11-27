@@ -1,0 +1,904 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Upload & Translate - Transfile" %}{% endblock %}
+
+{% block page_header %}
+<div class="page-header">
+    <div class="container text-center">
+        <h1><i class="bi bi-upload me-3"></i>{% trans "Upload & Translate" %}</h1>
+        <p>{% blocktrans %}Upload your documents and get professional AI-powered translations instantly{% endblocktrans %}</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .upload-container {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 2rem;
+    }
+    
+    .translation-options {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .translation-options > div {
+        flex: 1;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--dark-color);
+    }
+    
+    .form-select, .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .form-select:focus, .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.15);
+        outline: none;
+    }
+    
+    .upload-area {
+        border: 3px dashed #cbd5e1;
+        padding: 3rem 2rem;
+        text-align: center;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+        background: #f8fafc;
+        cursor: pointer;
+    }
+    
+    .upload-area:hover {
+        border-color: var(--primary-color);
+        background: rgba(79, 70, 229, 0.05);
+    }
+    
+    .upload-area.dragover {
+        border-color: var(--primary-color);
+        background: rgba(79, 70, 229, 0.1);
+        transform: scale(1.02);
+    }
+    
+    .upload-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .upload-text {
+        font-size: 1.1rem;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+    }
+    
+    .file-input {
+        display: none;
+    }
+    
+    .upload-btn {
+        background: var(--primary-color);
+        color: white;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .upload-btn:hover {
+        background: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    }
+    
+    .upload-btn:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .progress-container {
+        margin-top: 2rem;
+        display: none;
+    }
+    
+    .progress-bar-custom {
+        width: 100%;
+        height: 12px;
+        background: #e5e7eb;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--success-color), var(--accent-color));
+        width: 0%;
+        transition: width 0.6s ease;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .progress-fill::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent
+        );
+        background-size: 50px 50px;
+        animation: move 2s linear infinite;
+    }
+    
+    @keyframes move {
+        0% { background-position: 0 0; }
+        100% { background-position: 50px 50px; }
+    }
+    
+    .progress-text {
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    
+    .file-info {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: rgba(79, 70, 229, 0.05);
+        border: 1px solid rgba(79, 70, 229, 0.1);
+        border-radius: 12px;
+        display: none;
+    }
+    
+    .file-info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .file-info-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .error-message {
+        color: var(--danger-color);
+        margin-top: 1rem;
+        padding: 1rem;
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        border-radius: 12px;
+        display: none;
+    }
+    
+    .success-message {
+        color: var(--success-color);
+        margin-top: 1rem;
+        padding: 1rem;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 12px;
+        display: none;
+    }
+    
+    .btn-download {
+        background: var(--success-color);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-download:hover {
+        background: #059669;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+        .translation-options {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .upload-area {
+            padding: 2rem 1rem;
+        }
+        
+        .upload-icon {
+            font-size: 2rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="upload-container card-modern">
+    <div class="text-center mb-4">
+        <h2 class="text-gradient mb-2">
+            <i class="bi bi-file-earmark-text me-2"></i>
+            {% trans "Document Translation" %}
+        </h2>
+        <p class="text-muted">{% blocktrans %}Select your source and target languages, then upload your document{% endblocktrans %}</p>
+    </div>
+
+    <form id="translationForm">
+        {% csrf_token %}
+        
+        <!-- Translation Options -->
+        <div class="translation-options">
+            <div class="form-group">
+                <label for="source_language" class="form-label">
+                    <i class="bi bi-translate me-2"></i>{% trans "Source Language" %}
+                </label>
+                <select id="source_language" name="source_language" class="form-select" required>
+                    <option value="">{% trans "Choose source language..." %}</option>
+                    <option value="tr">{% trans "🇹🇷 Turkish" %}</option>
+                    <option value="en">{% trans "🇺🇸 English" %}</option>
+                    <option value="es">{% trans "🇪🇸 Spanish" %}</option>
+                    <option value="fr">{% trans "🇫🇷 French" %}</option>
+                    <option value="de">{% trans "🇩🇪 German" %}</option>
+                    <option value="it">{% trans "🇮🇹 Italian" %}</option>
+                    <option value="pt">{% trans "🇵🇹 Portuguese" %}</option>
+                    <option value="ru">{% trans "🇷🇺 Russian" %}</option>
+                    <option value="ja">{% trans "🇯🇵 Japanese" %}</option>
+                    <option value="ko">{% trans "🇰🇷 Korean" %}</option>
+                    <option value="zh">{% trans "🇨🇳 Chinese" %}</option>
+                    <option value="auto">{% trans "🔍 Auto-detect" %}</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="target_language" class="form-label">
+                    <i class="bi bi-arrow-right me-2"></i>{% trans "Target Language" %}
+                </label>
+                <select id="target_language" name="target_language" class="form-select" required>
+                    <option value="">{% trans "Choose target language..." %}</option>
+                    <option value="tr">{% trans "🇹🇷 Turkish" %}</option>
+                    <option value="en">{% trans "🇺🇸 English" %}</option>
+                    <option value="es">{% trans "🇪🇸 Spanish" %}</option>
+                    <option value="fr">{% trans "🇫🇷 French" %}</option>
+                    <option value="de">{% trans "🇩🇪 German" %}</option>
+                    <option value="it">{% trans "🇮🇹 Italian" %}</option>
+                    <option value="pt">{% trans "🇵🇹 Portuguese" %}</option>
+                    <option value="ru">{% trans "🇷🇺 Russian" %}</option>
+                    <option value="ja">{% trans "🇯🇵 Japanese" %}</option>
+                    <option value="ko">{% trans "🇰🇷 Korean" %}</option>
+                    <option value="zh">{% trans "🇨🇳 Chinese" %}</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- File Upload Area -->
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">
+                <i class="bi bi-cloud-arrow-up"></i>
+            </div>
+            <div class="upload-text">
+                <strong>{% trans "Drag and drop your document here" %}</strong>
+                <br>{% trans "or click to browse files" %}
+            </div>
+            <input type="file" id="fileInput" class="file-input" name="file" 
+                   accept=".pdf,.docx,.xlsx,.csv">
+            <button type="button" class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                <i class="bi bi-folder2-open me-2"></i>{% trans "Choose File" %}
+            </button>
+            <div class="mt-3">
+                <small class="text-muted">
+                    {% trans "Supported formats: PDF, XLSX, DOCX, CSV, (Max 25MB)" %}
+                </small>
+            </div>
+        </div>
+        
+        <div class="file-info" id="fileInfo"></div>
+        
+        <div class="text-center mt-4">
+            <button type="submit" class="upload-btn" id="translateBtn" disabled>
+                <i class="bi bi-play-circle me-2"></i>
+                {% trans "Upload & Translate" %}
+            </button>
+        </div>
+    </form>
+    
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar-custom">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">0%</div>
+    </div>
+    
+    <div class="error-message" id="errorMessage" role="alert" aria-live="assertive"></div>
+    <div class="success-message" id="successMessage"></div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const translationForm = document.getElementById('translationForm');
+        const translateBtn = document.getElementById('translateBtn');
+        const fileInfo = document.getElementById('fileInfo');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        
+        let selectedFile = null;
+        const CHUNK_SIZE = 1 * 1024 * 1024; // 1MB chunks
+        const MAX_CONCURRENT_UPLOADS = 3;
+        const RETRY_ATTEMPTS = 3;
+        const ALLOWED_EXTENSIONS = ['pdf', 'docx', 'xlsx', 'csv'];
+        
+        function getFileExtension(filename) {
+            const parts = filename.split('.');
+            if (parts.length < 2) return '';
+            return parts.pop().toLowerCase();
+        }
+        
+        // Drag and drop handlers
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileSelect(files[0]);
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileSelect(e.target.files[0]);
+            }
+        });
+        
+        function handleFileSelect(file) {
+            // Validate file type by extension
+            const ext = getFileExtension(file.name);
+            if (!ALLOWED_EXTENSIONS.includes(ext)) {
+                showError('{% trans "Unsupported file type. Allowed types: PDF, DOCX, XLSX, CSV" %}');
+                selectedFile = null;
+                fileInput.value = '';
+                fileInfo.style.display = 'none';
+                updateTranslateButton();
+                return;
+            }
+            selectedFile = file;
+            updateTranslateButton();
+            
+            // Display file info
+            fileInfo.style.display = 'block';
+            fileInfo.innerHTML = `
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <i class="bi bi-file-earmark-text text-primary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h6 class="mb-1">${file.name}</h6>
+                        <div class="file-info-item">
+                            <span><i class="bi bi-hdd me-1"></i>{% trans "Size:" %}</span>
+                            <span class="fw-bold">${formatFileSize(file.size)}</span>
+                        </div>
+                        <div class="file-info-item">
+                            <span><i class="bi bi-filetype-pdf me-1"></i>{% trans "Type:" %}</span>
+                            <span class="fw-bold">${file.type || 'Unknown'}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="bi bi-check-circle text-success" style="font-size: 1.5rem;"></i>
+                    </div>
+                </div>
+            `;
+            
+            hideMessages();
+        }
+        
+        function updateTranslateButton() {
+            const sourceLanguage = document.getElementById('source_language').value;
+            const targetLanguage = document.getElementById('target_language').value;
+            
+            // block same language selection unless auto-detect is chosen as source
+            const isSameLang = sourceLanguage && targetLanguage && sourceLanguage !== 'auto' && sourceLanguage === targetLanguage;
+            if (isSameLang) {
+                showError('{% trans "Source and target languages must be different" %}');
+            } else {
+                hideMessages();
+            }
+            translateBtn.disabled = !(selectedFile && sourceLanguage && targetLanguage) || isSameLang;
+        }
+        
+        // Update button state when language selection changes
+        document.getElementById('source_language').addEventListener('change', updateTranslateButton);
+        document.getElementById('target_language').addEventListener('change', updateTranslateButton);
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function hideMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+        
+        function showError(message) {
+            const msg = typeof message === 'string' ? message : (message && message.error) || 'An error occurred';
+            errorMessage.textContent = msg;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+            // Scroll error into view for visibility
+            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function showSuccess(message) {
+            successMessage.innerHTML = message;
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+        }
+        
+        async function showUploadSuccess(filePath) {
+            // First get the price estimation
+            try {
+                const formData = new FormData();
+                formData.append('file_path', filePath);
+                
+                const response = await fetch('estimate-price', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to get price estimation');
+                }
+                
+                const result = await response.json();
+                
+                // Show success message with price and translation button
+                showSuccess(`
+                    <div>File uploaded successfully!</div>
+                    <div class="alert alert-info mt-3">
+                        <i class="bi bi-tag me-2"></i>
+                        <strong>Estimated Price:</strong> ${result.price} <span>credits</span>
+                    </div>
+                    <div class="mt-3">
+                        <button id="startTranslateBtn" type="button" class="upload-btn">
+                            <i class="bi bi-translate me-2"></i>Start Translation
+                        </button>
+                    </div>
+                `);
+                
+                // Add click event to the new button
+                document.getElementById('startTranslateBtn').addEventListener('click', function() {
+                    startTranslation(filePath);
+                });
+                
+            } catch (error) {
+                console.error('Error getting price:', error);
+                // Still show the translate button even if price fetch fails
+                showSuccess(`
+                    <div>File uploaded successfully!</div>
+                    <div class="mt-3">
+                        <button id="startTranslateBtn" type="button" class="upload-btn">
+                            <i class="bi bi-translate me-2"></i>Start Translation
+                        </button>
+                    </div>
+                `);
+                
+                document.getElementById('startTranslateBtn').addEventListener('click', function() {
+                    startTranslation(filePath);
+                });
+            }
+        }
+        
+        translationForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!selectedFile) {
+                showError('{% trans "Please select a file first" %}');
+                return;
+            }
+            
+            const sourceLanguage = document.getElementById('source_language').value;
+            const targetLanguage = document.getElementById('target_language').value;
+            
+            if (!sourceLanguage || !targetLanguage) {
+                showError('{% trans "Please select both source and target languages" %}');
+                return;
+            }
+
+            if (sourceLanguage !== 'auto' && sourceLanguage === targetLanguage) {
+                showError('Source and target languages must be different');
+                return;
+            }
+            
+            // Start upload and translation
+            await uploadAndTranslate();
+        });
+        
+        async function uploadAndTranslate() {
+            // Decide upload method based on file size
+            const uploadId = Date.now().toString();
+            
+                if (selectedFile.size > 1 * 1024 * 1024) { // > 10MB
+                await uploadInChunks(uploadId);
+            } else {
+                await uploadDirect(uploadId);
+            }
+        }
+        
+        async function uploadDirect(uploadId) {
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('upload_id', uploadId);
+            
+            progressContainer.style.display = 'block';
+            translateBtn.disabled = true;
+            
+            try {
+                const xhr = new XMLHttpRequest();
+                
+                xhr.upload.addEventListener('progress', (e) => {
+                    if (e.lengthComputable) {
+                        const percentComplete = (e.loaded / e.total) * 100; // 100% for upload
+                        updateProgress(percentComplete);
+                    }
+                });
+                
+                xhr.onload = async function() {
+                    if (xhr.status === 200) {
+                        const response = JSON.parse(xhr.responseText);
+                        updateProgress(100);
+                        
+                        // Show translation button after successful upload
+                        if (response.file) {
+                            showUploadSuccess(response.file);
+                        } else {
+                            throw new Error('{% trans "No file path received from server" %}');
+                        }
+                    } else {
+                        let err = '{% trans "Upload failed" %}';
+                        try {
+                            const parsed = JSON.parse(xhr.responseText);
+                            err = parsed.error || err;
+                        } catch (_) {}
+                        showError(err);
+                        translateBtn.disabled = false;
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    showError('{% trans "Network error occurred" %}');
+                    translateBtn.disabled = false;
+                };
+                
+                xhr.open('POST', '/upload/direct/');
+                xhr.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
+                xhr.send(formData);
+                
+            } catch (error) {
+                showError('{% trans "Upload failed:" %} ' + error.message);
+                translateBtn.disabled = false;
+            }
+        }
+        
+        async function uploadInChunks(uploadId) {
+            const totalChunks = Math.ceil(selectedFile.size / CHUNK_SIZE);
+            
+            progressContainer.style.display = 'block';
+            translateBtn.disabled = true;
+            
+            try {
+                // Create chunks array for parallel processing
+                const chunks = [];
+                for (let i = 0; i < totalChunks; i++) {
+                    chunks.push(i);
+                }
+                
+                // Process chunks in parallel with concurrency limit
+                await processChunksInParallel(chunks, uploadId, totalChunks, (progress) => {
+                    updateProgress(progress);
+                });
+                
+            } catch (error) {
+                showError('Upload failed: ' + error.message);
+                translateBtn.disabled = false;
+            }
+        }
+        
+        async function processChunksInParallel(chunks, uploadId, totalChunks, onProgress) {
+            let completed = 0;
+            let taskId = null;
+            
+            // Process chunks in batches
+            for (let i = 0; i < chunks.length; i += MAX_CONCURRENT_UPLOADS) {
+                const batch = chunks.slice(i, i + MAX_CONCURRENT_UPLOADS);
+                const promises = batch.map(chunkIndex => 
+                    uploadChunkWithRetry(chunkIndex, uploadId, totalChunks)
+                        .then((response) => {
+                            completed++;
+                            onProgress((completed / totalChunks) * 100); // 100% for upload
+                            
+                            // Check if this was the last chunk
+                            if (response && response.completed) {
+                                taskId = response.file_path; // Store file path for translation
+                            }
+                        })
+                );
+                
+                await Promise.all(promises);
+                
+                // Small delay between batches
+                if (i + MAX_CONCURRENT_UPLOADS < chunks.length) {
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            }
+            
+            // If upload completed, show translation button
+            if (taskId) {
+                showUploadSuccess(taskId);
+                translateBtn.disabled = false;
+            }
+        }
+        
+        async function uploadChunkWithRetry(chunkIndex, uploadId, totalChunks) {
+            const start = chunkIndex * CHUNK_SIZE;
+            const end = Math.min(start + CHUNK_SIZE, selectedFile.size);
+            const chunk = selectedFile.slice(start, end);
+            
+            for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
+                try {
+                    const formData = new FormData();
+                    formData.append('chunk', chunk);
+                    formData.append('chunk_number', chunkIndex);
+                    formData.append('total_chunks', totalChunks);
+                    formData.append('file_name', selectedFile.name);
+                    formData.append('upload_id', uploadId);
+                    formData.append('chunk_start', start);
+                    formData.append('chunk_size', CHUNK_SIZE);
+                    
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 60000);
+                    
+                    const response = await fetch('/upload/chunked/', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': getCookie('csrftoken')
+                        },
+                        signal: controller.signal
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    
+                    if (!response.ok) {
+                        let serverError = '{% trans "Chunk upload failed" %}';
+                        try {
+                            const error = await response.json();
+                            serverError = error.error || serverError;
+                        } catch (_) {}
+                        throw new Error(serverError);
+                    }
+                    
+                    const result = await response.json();
+                    return result; // Return the response for task_id checking
+                    
+                } catch (error) {
+                    console.warn(`Chunk ${chunkIndex} attempt ${attempt} failed:`, error.message);
+                    
+                    if (attempt === RETRY_ATTEMPTS) {
+                        throw new Error(`{% trans "Chunk" %} ${chunkIndex} {% trans "failed after" %} ${RETRY_ATTEMPTS} {% trans "attempts:" %} ${error.message}`);
+                    }
+                    
+                    // Exponential backoff
+                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+                }
+            }
+        }
+        
+        async function finalizeUpload(uploadId) {
+            // The chunked upload automatically handles finalization
+            // when the last chunk is uploaded. No separate finalize step needed.
+            return;
+        }
+        
+        async function startTranslation(filePath) {
+            try {
+                if (!filePath) {
+                    throw new Error('No file path provided for translation');
+                }
+                
+                // Reset progress bar for translation phase
+                progressContainer.style.display = 'block';
+                progressFill.style.width = '0%';
+                updateProgress(0);
+                progressText.textContent = '{% trans "Starting translation..." %}';
+                
+                // Hide the start translation button
+                successMessage.style.display = 'none';
+                
+                const formData = new FormData();
+                formData.append('file_path', filePath);
+                formData.append('source_language', document.getElementById('source_language').value);
+                formData.append('target_language', document.getElementById('target_language').value);
+                
+                const response = await fetch('/upload/translate', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+                
+                if (!response.ok) {
+                    let serverError = '{% trans "Translation failed" %}';
+                    try {
+                        const error = await response.json();
+                        serverError = error.error || serverError;
+                    } catch (_) {}
+                    throw new Error(serverError);
+                }
+                
+                const result = await response.json();
+                
+                if (result.task_id) {
+                    showSuccess('{% trans "Translation started successfully!" %}');
+                    pollTaskStatus(result.task_id);
+                } else {
+                    throw new Error('{% trans "No task ID received" %}');
+                }
+                
+            } catch (error) {
+                showError('{% trans "Translation failed:" %} ' + error.message);
+                translateBtn.disabled = false;
+            }
+        }
+        
+        function pollTaskStatus(taskId) {
+            const pollInterval = 2000; // Poll every 2 seconds
+            
+            const poll = async () => {
+                try {
+                    const response = await fetch(`/upload/ajax-status/${taskId}/`, {
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.status === 'SUCCESS') {
+                        updateProgress(100);
+                        
+                        // Show success message with download button
+                        if (result.download_url) {
+                            showSuccess(`
+                                <div>{% trans "Translation completed successfully!" %}</div>
+                                <div class="mt-3">
+                                    <a href="${result.download_url}" class="btn-download" download>
+                                        <i class="bi bi-download me-2"></i>{% trans "Download Translated File" %}
+                                    </a>
+                                </div>
+                            `);
+                        } else {
+                            showSuccess('{% trans "Translation completed successfully!" %}');
+                        }
+                        
+                    } else if (result.status === 'FAILURE') {
+                        showError('{% trans "Translation failed:" %} ' + (result.error || '{% trans "Unknown error" %}'));
+                        resetForm();
+                        
+                    } else                     if (result.status === 'PENDING') {
+                        // Update progress to show translation is in progress
+                        updateProgress(50);
+                        progressText.textContent = '{% trans "Translating..." %}';
+                        
+                        // Continue polling
+                        setTimeout(poll, pollInterval);
+                    }
+                    
+                } catch (error) {
+                    showError('{% trans "Error checking translation status:" %} ' + error.message);
+                    resetForm();
+                }
+            };
+            
+            // Start polling
+            poll();
+        }
+        
+        function updateProgress(percent) {
+            progressFill.style.width = percent + '%';
+            progressText.textContent = Math.round(percent) + '%';
+        }
+        
+        function resetForm() {
+            selectedFile = null;
+            fileInput.value = '';
+            updateTranslateButton();
+            fileInfo.style.display = 'none';
+            progressContainer.style.display = 'none';
+            progressFill.style.width = '0%';
+            progressText.textContent = '0%';
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+        }
+        
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+</script>
+{% endblock %}

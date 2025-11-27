@@ -1,0 +1,851 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:49+0300\n"
+"PO-Revision-Date: 2025-10-06 11:00+0300\n"
+"Last-Translator: ChatGPT <translate@transfile.ai>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\accounts\templates\registration\login.html:7
+msgid "Login - Transfile"
+msgstr "Вход - Transfile"
+
+#: .\accounts\templates\registration\login.html:237
+msgid "Welcome Back"
+msgstr "С возвращением"
+
+#: .\accounts\templates\registration\login.html:238
+msgid "Sign in to Transfile"
+msgstr "Войти в Transfile"
+
+#: .\accounts\templates\registration\login.html:245
+#: .\accounts\templates\registration\register.html:280
+msgid "Please correct the following errors:"
+msgstr "Пожалуйста, исправьте следующие ошибки:"
+
+#: .\accounts\templates\registration\login.html:262
+#: .\accounts\templates\registration\login.html:266
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\accounts\templates\registration\login.html:282
+#: .\accounts\templates\registration\login.html:285
+#: .\accounts\templates\registration\register.html:340
+#: .\accounts\templates\registration\register.html:343
+msgid "Password"
+msgstr "Пароль"
+
+#: .\accounts\templates\registration\login.html:299
+#: .\accounts\templates\registration\login.html:336
+#: .\translate\templates\translate\home.html:35
+msgid "Sign In"
+msgstr "Войти"
+
+#: .\accounts\templates\registration\login.html:309
+msgid "Don't have an account?"
+msgstr "Нет аккаунта?"
+
+#: .\accounts\templates\registration\login.html:310
+msgid "Create one here"
+msgstr "Создать здесь"
+
+#: .\accounts\templates\registration\login.html:314
+msgid "Forgot your password?"
+msgstr "Забыли пароль?"
+
+#: .\accounts\templates\registration\login.html:330
+msgid "Signing In..."
+msgstr "Выполняется вход..."
+
+#: .\accounts\templates\registration\register.html:7
+msgid "Register - Transfile"
+msgstr "Регистрация - Transfile"
+
+#: .\accounts\templates\registration\register.html:272
+msgid "Join Transfile"
+msgstr "Присоединиться к Transfile"
+
+#: .\accounts\templates\registration\register.html:273
+msgid "Create your account to start translating"
+msgstr "Создайте аккаунт, чтобы начать переводить"
+
+#: .\accounts\templates\registration\register.html:290
+msgid "Password Requirements"
+msgstr "Требования к паролю"
+
+#: .\accounts\templates\registration\register.html:293
+msgid "At least 8 characters long"
+msgstr "Не менее 8 символов"
+
+#: .\accounts\templates\registration\register.html:297
+msgid "Cannot be too similar to personal information"
+msgstr "Не должен быть слишком похож на личную информацию"
+
+#: .\accounts\templates\registration\register.html:301
+msgid "Cannot be a commonly used password"
+msgstr "Не должен быть часто используемым паролем"
+
+#: .\accounts\templates\registration\register.html:305
+msgid "Cannot be entirely numeric"
+msgstr "Не должен состоять только из цифр"
+
+#: .\accounts\templates\registration\register.html:316
+msgid "email"
+msgstr "email"
+
+#: .\accounts\templates\registration\register.html:320
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
+#: .\accounts\templates\registration\register.html:362
+#: .\accounts\templates\registration\register.html:365
+msgid "Confirm Password"
+msgstr "Подтвердите пароль"
+
+#: .\accounts\templates\registration\register.html:382
+#: .\accounts\templates\registration\register.html:414
+msgid "Create Account"
+msgstr "Создать аккаунт"
+
+#: .\accounts\templates\registration\register.html:391
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+#: .\accounts\templates\registration\register.html:392
+msgid "Sign in here"
+msgstr "Войти здесь"
+
+#: .\accounts\templates\registration\register.html:408
+msgid "Creating Account..."
+msgstr "Создание аккаунта..."
+
+#: .\accounts\templates\registration\register.html:435
+#: .\accounts\templates\registration\register.html:443
+msgid "Passwords do not match"
+msgstr "Пароли не совпадают"
+
+#: .\blog\admin.py:21
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\blog\admin.py:27
+msgid "Languages"
+msgstr "Языки"
+
+#: .\blog\models.py:15
+msgid "Blog Title"
+msgstr "Заголовок блога"
+
+#: .\blog\models.py:16
+msgid "Blog Content"
+msgstr "Содержание блога"
+
+#: .\blog\models.py:18
+msgid "SEO Title"
+msgstr "SEO заголовок"
+
+#: .\blog\models.py:19
+msgid "SEO Description"
+msgstr "SEO описание"
+
+#: .\blog\models.py:21
+msgid "Blog Image"
+msgstr "Изображение блога"
+
+#: .\blog\models.py:22
+msgid "Register Date"
+msgstr "Дата Регистрации"
+
+#: .\blog\models.py:26
+msgid "Blog Yazısı"
+msgstr "Статья блога"
+
+#: .\blog\models.py:27
+msgid "Blog Yazıları"
+msgstr "Статьи блога"
+
+#: .\blog\templates\blogs\blog_detail.html:4
+#: .\blog\templates\blogs\blog_list.html:4
+msgid "Blog - Transfile"
+msgstr "Вход - Transfile"
+
+#: .\blog\templates\blogs\blog_detail.html:232
+msgid "5 min read"
+msgstr "5 мин чтения"
+
+#: .\blog\templates\blogs\blog_detail.html:263
+msgid "Copy Link"
+msgstr "Копировать ссылку"
+
+#: .\blog\templates\blogs\blog_detail.html:270
+#, fuzzy
+#| msgid "Back to Home"
+msgid "Back to Blog"
+msgstr "На главную"
+
+#: .\blog\templates\blogs\blog_detail.html:286
+msgid "min read"
+msgstr "мин чтения"
+
+#: .\blog\templates\blogs\blog_detail.html:307
+#: .\blog\templates\blogs\blog_detail.html:316
+#: .\blog\templates\blogs\blog_list.html:504
+msgid "Link copied to clipboard!"
+msgstr "Ссылка скопирована в буфер обмена!"
+
+#: .\blog\templates\blogs\blog_list.html:10
+msgid "Blog & Insights"
+msgstr "Блог и идеи"
+
+#: .\blog\templates\blogs\blog_list.html:12
+msgid "Discover translation tips, industry insights, and latest updates"
+msgstr ""
+"Откройте для себя советы по переводу, идеи отрасли и последние обновления"
+
+#: .\blog\templates\blogs\blog_list.html:30
+msgid "Search blog posts..."
+msgstr "Поиск статей блога..."
+
+#: .\blog\templates\blogs\blog_list.html:38
+msgid "Latest"
+msgstr "Последние"
+
+#: .\blog\templates\blogs\blog_list.html:42
+msgid "Popular"
+msgstr "Популярные"
+
+#: .\blog\templates\blogs\blog_list.html:101
+msgid "Read More"
+msgstr "Читать далее"
+
+#: .\blog\templates\blogs\blog_list.html:124
+msgid "Blog pagination"
+msgstr "Пагинация блога"
+
+#: .\blog\templates\blogs\blog_list.html:176
+msgid "No Blog Posts Yet"
+msgstr "Пока нет записей в блоге"
+
+#: .\blog\templates\blogs\blog_list.html:178
+msgid "We're working on creating amazing content for you. Check back soon!"
+msgstr ""
+"Мы работаем над созданием удивительного контента для вас. Заходите скоро!"
+
+#: .\blog\templates\blogs\blog_list.html:181
+msgid "Back to Home"
+msgstr "На главную"
+
+#: .\blog\templates\blogs\blog_list.html:196
+msgid "Stay Updated"
+msgstr "Оставайтесь в курсе"
+
+#: .\blog\templates\blogs\blog_list.html:198
+msgid ""
+"Subscribe to our newsletter for the latest translation tips and industry "
+"insights."
+msgstr ""
+"Подпишитесь на нашу рассылку для получения последних советов по переводу и "
+"идей отрасли."
+
+#: .\blog\templates\blogs\blog_list.html:204
+msgid "Enter your email address"
+msgstr "Введите адрес электронной почты"
+
+#: .\blog\templates\blogs\blog_list.html:207
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: .\blog\templates\blogs\blog_list.html:519
+msgid "Please enter your email address"
+msgstr "Пожалуйста, введите ваш email адрес"
+
+#: .\blog\templates\blogs\blog_list.html:524
+msgid "Please enter a valid email address"
+msgstr "Пожалуйста, введите действительный email адрес"
+
+#: .\blog\templates\blogs\blog_list.html:531
+msgid "Subscribing..."
+msgstr "Подписка..."
+
+#: .\blog\templates\blogs\blog_list.html:538
+msgid "Successfully subscribed to newsletter!"
+msgstr "Успешно подписались на рассылку!"
+
+#: .\blog\templates\blogs\blog_list.html:578
+msgid "No posts found"
+msgstr "Статьи не найдены"
+
+#: .\blog\templates\blogs\blog_list.html:579
+msgid "Try adjusting your search terms"
+msgstr "Попробуйте изменить поисковые запросы"
+
+#: .\documents\templates\documents\history.html:4
+msgid "Translation History - Transfile"
+msgstr "История переводов - Transfile"
+
+#: .\documents\templates\documents\history.html:9
+msgid "Translation History"
+msgstr "История переводов"
+
+#: .\documents\templates\documents\history.html:10
+msgid "View and manage your translated documents"
+msgstr "Просмотр и управление переведенными документами"
+
+#: .\documents\templates\documents\history.html:35
+#: .\documents\templates\documents\history.html:39
+msgid "Download"
+msgstr "Скачать"
+
+#: .\documents\templates\documents\history.html:43
+msgid "Processing..."
+msgstr "Обработка..."
+
+#: .\documents\templates\documents\history.html:61
+msgid "Completed"
+msgstr "Завершено"
+
+#: .\documents\templates\documents\history.html:63
+msgid "Processing"
+msgstr "Обработка"
+
+#: .\documents\templates\documents\history.html:65
+msgid "Failed"
+msgstr "Ошибка"
+
+#: .\documents\templates\documents\history.html:67
+msgid "Pending"
+msgstr "В ожидании"
+
+#: .\documents\templates\documents\history.html:82
+msgid "No Documents Yet"
+msgstr "Пока нет документов"
+
+#: .\documents\templates\documents\history.html:83
+msgid "You haven't translated any documents yet."
+msgstr "Вы еще не перевели ни одного документа."
+
+#: .\documents\templates\documents\history.html:85
+msgid "Translate Your First Document"
+msgstr "Переведите свой первый документ"
+
+#: .\documents\templates\documents\history.html:105
+msgid "Are you sure you want to delete this document?"
+msgstr "Вы уверены, что хотите удалить этот документ?"
+
+#: .\templates\base.html:408
+msgid "Transfile"
+msgstr "Transfile"
+
+#: .\templates\base.html:420
+msgid "Blog"
+msgstr "Блог"
+
+#: .\templates\base.html:428
+msgid "Translate"
+msgstr "Перевести"
+
+#: .\templates\base.html:433
+msgid "History"
+msgstr "История"
+
+#: .\templates\base.html:443
+msgid "Credits"
+msgstr "Кредиты"
+
+#: .\templates\base.html:481
+msgid "Settings"
+msgstr "Настройки"
+
+#: .\templates\base.html:489
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\templates\base.html:497
+msgid "Login"
+msgstr "Войти"
+
+#: .\templates\base.html:502
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: .\templates\base.html:549
+msgid "Professional document translation powered by AI"
+msgstr "Профессиональный перевод документов на основе ИИ"
+
+#: .\translate\templates\translate\home.html:5
+msgid "Home - Transfile"
+msgstr "Главная - Transfile"
+
+#: .\translate\templates\translate\home.html:14
+msgid "Welcome to Transfile"
+msgstr "Добро пожаловать в Transfile"
+
+#: .\translate\templates\translate\home.html:17
+msgid ""
+"Professional document translation powered by cutting-edge AI technology.\n"
+"                    Transform your documents across multiple languages with "
+"precision and speed."
+msgstr ""
+"Профессиональный перевод документов на основе передовых технологий ИИ.\n"
+"                    Преобразуйте ваши документы на разные языки с точностью "
+"и скоростью."
+
+#: .\translate\templates\translate\home.html:23
+msgid "Start Translating"
+msgstr "Начать перевод"
+
+#: .\translate\templates\translate\home.html:26
+msgid "Learn More"
+msgstr "Узнать больше"
+
+#: .\translate\templates\translate\home.html:32
+msgid "Get Started Free"
+msgstr "Начать бесплатно"
+
+#: .\translate\templates\translate\home.html:51
+msgid "Why Choose Transfile?"
+msgstr "Почему выбирают Transfile?"
+
+#: .\translate\templates\translate\home.html:53
+msgid ""
+"Experience the future of document translation with our advanced AI-powered "
+"platform"
+msgstr ""
+"Испытайте будущее перевода документов с нашей передовой платформой на основе "
+"ИИ"
+
+#: .\translate\templates\translate\home.html:64
+msgid "Lightning Fast"
+msgstr "Молниеносно"
+
+#: .\translate\templates\translate\home.html:66
+msgid ""
+"Advanced AI algorithms deliver professional translations in seconds, not "
+"hours.\n"
+"                        Process multiple documents simultaneously with our "
+"efficient queue system."
+msgstr ""
+"Передовые алгоритмы ИИ выполняют профессиональные переводы за секунды, а не "
+"часы.\n"
+"                        Обрабатывайте несколько документов одновременно с "
+"нашей эффективной системой очередей."
+
+#: .\translate\templates\translate\home.html:77
+msgid "Accurate & Reliable"
+msgstr "Точно и надежно"
+
+#: .\translate\templates\translate\home.html:79
+msgid ""
+"Industry-leading accuracy powered by state-of-the-art machine learning "
+"models.\n"
+"                        Trusted by professionals worldwide for critical "
+"document translation."
+msgstr ""
+"Лидирующая в отрасли точность благодаря современным моделям машинного "
+"обучения.\n"
+"                        Доверие профессионалов по всему миру для критически "
+"важных переводов документов."
+
+#: .\translate\templates\translate\home.html:90
+msgid "Multiple Formats"
+msgstr "Множество форматов"
+
+#: .\translate\templates\translate\home.html:92
+msgid ""
+"Support for PDF, DOCX, XLSX, CSV and more. Preserve formatting,\n"
+"                        layouts, and styles while translating your important "
+"documents."
+msgstr ""
+"Поддержка PDF, DOCX, XLSX, CSV и других форматов. Сохранение "
+"форматирования,\n"
+"                        макетов и стилей при переводе важных документов."
+
+#: .\translate\templates\translate\home.html:103
+msgid "100+ Languages"
+msgstr "Более 100 языков"
+
+#: .\translate\templates\translate\home.html:105
+msgid ""
+"Translate between over 100 languages with native-level fluency.\n"
+"                        From major world languages to regional dialects and "
+"technical terminology."
+msgstr ""
+"Переводите между более чем 100 языками с качеством носителя языка.\n"
+"                        От основных мировых языков до региональных диалектов "
+"и технической терминологии."
+
+#: .\translate\templates\translate\home.html:116
+msgid "Secure & Private"
+msgstr "Безопасно и конфиденциально"
+
+#: .\translate\templates\translate\home.html:118
+msgid ""
+"Enterprise-grade security with end-to-end encryption. Your documents\n"
+"                        are automatically deleted after processing to ensure "
+"complete privacy."
+msgstr ""
+"Безопасность корпоративного уровня с сквозным шифрованием. Ваши документы\n"
+"                        автоматически удаляются после обработки для "
+"обеспечения полной конфиденциальности."
+
+#: .\translate\templates\translate\home.html:129
+msgid "Cloud-Powered"
+msgstr "На основе облака"
+
+#: .\translate\templates\translate\home.html:131
+msgid ""
+"Access your translations from anywhere with our cloud-based platform.\n"
+"                        No software installation required - just upload and "
+"translate."
+msgstr ""
+"Доступ к переводам из любой точки мира с нашей облачной платформой.\n"
+"                        Не требуется установка программного обеспечения - "
+"просто загрузите и переведите."
+
+#: .\translate\templates\translate\home.html:145
+msgid "How It Works"
+msgstr "Как это работает"
+
+#: .\translate\templates\translate\home.html:147
+msgid "Get professional translations in just three simple steps"
+msgstr "Получите профессиональные переводы всего за три простых шага"
+
+#: .\translate\templates\translate\home.html:162
+msgid "Upload Document"
+msgstr "Загрузить документ"
+
+#: .\translate\templates\translate\home.html:164
+msgid ""
+"Simply drag and drop your file or click to browse.\n"
+"                    We support all major document formats including PDF, "
+"Word, Excel, and more."
+msgstr ""
+"Просто перетащите файл или нажмите для выбора.\n"
+"                    Мы поддерживаем все основные форматы документов, включая "
+"PDF, Word, Excel и другие."
+
+#: .\translate\templates\translate\home.html:178
+msgid "Select Languages"
+msgstr "Выбрать языки"
+
+#: .\translate\templates\translate\home.html:180
+msgid ""
+"Choose your source and target languages from our extensive list.\n"
+"                    Our AI automatically detects the source language if "
+"you're unsure."
+msgstr ""
+"Выберите исходный и целевой языки из нашего обширного списка.\n"
+"                    Наш ИИ автоматически определит исходный язык, если вы не "
+"уверены."
+
+#: .\translate\templates\translate\home.html:191
+msgid "Download Result"
+msgstr "Скачать результат"
+
+#: .\translate\templates\translate\home.html:193
+msgid ""
+"Receive your professionally translated document in the same format.\n"
+"                    All formatting, images, and layouts are perfectly "
+"preserved."
+msgstr ""
+"Получите профессионально переведенный документ в том же формате.\n"
+"                    Все форматирование, изображения и макеты идеально "
+"сохраняются."
+
+#: .\translate\templates\translate\home.html:208
+msgid "Ready to Transform Your Documents?"
+msgstr "Готовы преобразовать ваши документы?"
+
+#: .\translate\templates\translate\home.html:210
+msgid ""
+"Join thousands of professionals who trust Transfile for their translation "
+"needs.\n"
+"                    Start your journey today and experience the power of AI-"
+"driven translation."
+msgstr ""
+"Присоединяйтесь к тысячам профессионалов, которые доверяют Transfile свои "
+"переводы.\n"
+"                    Начните свой путь сегодня и испытайте мощь перевода на "
+"основе ИИ."
+
+#: .\translate\templates\translate\home.html:215
+msgid "Upload Your First Document"
+msgstr "Загрузите свой первый документ"
+
+#: .\translate\templates\translate\home.html:220
+msgid "Start Free Trial"
+msgstr "Начать бесплатный пробный период"
+
+#: .\translate\templates\translate\upload.html:4
+msgid "Upload & Translate - Transfile"
+msgstr "Загрузка и перевод - Transfile"
+
+#: .\translate\templates\translate\upload.html:9
+#: .\translate\templates\translate\upload.html:345
+msgid "Upload & Translate"
+msgstr "Загрузить и перевести"
+
+#: .\translate\templates\translate\upload.html:10
+msgid ""
+"Upload your documents and get professional AI-powered translations instantly"
+msgstr ""
+"Загрузите ваши документы и мгновенно получите профессиональные переводы на "
+"основе ИИ"
+
+#: .\translate\templates\translate\upload.html:267
+msgid "Document Translation"
+msgstr "Перевод документов"
+
+#: .\translate\templates\translate\upload.html:269
+msgid "Select your source and target languages, then upload your document"
+msgstr "Выберите исходный и целевой языки, затем загрузите документ"
+
+#: .\translate\templates\translate\upload.html:279
+msgid "Source Language"
+msgstr "Исходный язык"
+
+#: .\translate\templates\translate\upload.html:282
+msgid "Choose source language..."
+msgstr "Выберите исходный язык..."
+
+#: .\translate\templates\translate\upload.html:283
+#: .\translate\templates\translate\upload.html:304
+msgid "🇹🇷 Turkish"
+msgstr "🇹🇷 Турецкий"
+
+#: .\translate\templates\translate\upload.html:284
+#: .\translate\templates\translate\upload.html:305
+msgid "🇺🇸 English"
+msgstr "🇺🇸 Английский"
+
+#: .\translate\templates\translate\upload.html:285
+#: .\translate\templates\translate\upload.html:306
+msgid "🇪🇸 Spanish"
+msgstr "🇪🇸 Испанский"
+
+#: .\translate\templates\translate\upload.html:286
+#: .\translate\templates\translate\upload.html:307
+msgid "🇫🇷 French"
+msgstr "🇫🇷 Французский"
+
+#: .\translate\templates\translate\upload.html:287
+#: .\translate\templates\translate\upload.html:308
+msgid "🇩🇪 German"
+msgstr "🇩🇪 Немецкий"
+
+#: .\translate\templates\translate\upload.html:288
+#: .\translate\templates\translate\upload.html:309
+msgid "🇮🇹 Italian"
+msgstr "🇮🇹 Итальянский"
+
+#: .\translate\templates\translate\upload.html:289
+#: .\translate\templates\translate\upload.html:310
+msgid "🇵🇹 Portuguese"
+msgstr "🇵🇹 Португальский"
+
+#: .\translate\templates\translate\upload.html:290
+#: .\translate\templates\translate\upload.html:311
+msgid "🇷🇺 Russian"
+msgstr "🇷🇺 Русский"
+
+#: .\translate\templates\translate\upload.html:291
+#: .\translate\templates\translate\upload.html:312
+msgid "🇯🇵 Japanese"
+msgstr "🇯🇵 Японский"
+
+#: .\translate\templates\translate\upload.html:292
+#: .\translate\templates\translate\upload.html:313
+msgid "🇰🇷 Korean"
+msgstr "🇰🇷 Корейский"
+
+#: .\translate\templates\translate\upload.html:293
+#: .\translate\templates\translate\upload.html:314
+msgid "🇨🇳 Chinese"
+msgstr "🇨🇳 Китайский"
+
+#: .\translate\templates\translate\upload.html:294
+msgid "🔍 Auto-detect"
+msgstr "🔍 Автоопределение"
+
+#: .\translate\templates\translate\upload.html:300
+msgid "Target Language"
+msgstr "Целевой язык"
+
+#: .\translate\templates\translate\upload.html:303
+msgid "Choose target language..."
+msgstr "Выберите целевой язык..."
+
+#: .\translate\templates\translate\upload.html:325
+msgid "Drag and drop your document here"
+msgstr "Перетащите документ сюда"
+
+#: .\translate\templates\translate\upload.html:326
+msgid "or click to browse files"
+msgstr "или нажмите для выбора файлов"
+
+#: .\translate\templates\translate\upload.html:331
+msgid "Choose File"
+msgstr "Выбрать файл"
+
+#: .\translate\templates\translate\upload.html:335
+msgid "Supported formats: PDF, XLSX, DOCX, CSV, (Max 25MB)"
+msgstr "Поддерживаемые форматы: PDF, XLSX, DOCX, CSV (макс. 25МБ)"
+
+#: .\translate\templates\translate\upload.html:416
+msgid "Unsupported file type. Allowed types: PDF, DOCX, XLSX, CSV"
+msgstr "Неподдерживаемый тип файла. Разрешенные типы: PDF, DOCX, XLSX, CSV"
+
+#: .\translate\templates\translate\upload.html:436
+msgid "Size:"
+msgstr "Размер:"
+
+#: .\translate\templates\translate\upload.html:440
+msgid "Type:"
+msgstr "Тип:"
+
+#: .\translate\templates\translate\upload.html:460
+msgid "Source and target languages must be different"
+msgstr "Исходный и целевой языки должны различаться"
+
+#: .\translate\templates\translate\upload.html:560
+msgid "Please select a file first"
+msgstr "Пожалуйста, сначала выберите файл"
+
+#: .\translate\templates\translate\upload.html:568
+msgid "Please select both source and target languages"
+msgstr "Пожалуйста, выберите исходный и целевой языки"
+
+#: .\translate\templates\translate\upload.html:619
+msgid "No file path received from server"
+msgstr "Не получен путь к файлу от сервера"
+
+#: .\translate\templates\translate\upload.html:622
+msgid "Upload failed"
+msgstr "Ошибка загрузки"
+
+#: .\translate\templates\translate\upload.html:633
+msgid "Network error occurred"
+msgstr "Произошла сетевая ошибка"
+
+#: .\translate\templates\translate\upload.html:642
+msgid "Upload failed:"
+msgstr "Ошибка загрузки:"
+
+#: .\translate\templates\translate\upload.html:737
+msgid "Chunk upload failed"
+msgstr "Ошибка загрузки фрагмента"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "Chunk"
+msgstr "Фрагмент"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "failed after"
+msgstr "ошибка после"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "attempts:"
+msgstr "попыток:"
+
+#: .\translate\templates\translate\upload.html:777
+msgid "Starting translation..."
+msgstr "Начало перевода..."
+
+#: .\translate\templates\translate\upload.html:796
+msgid "Translation failed"
+msgstr "Ошибка перевода"
+
+#: .\translate\templates\translate\upload.html:807
+msgid "Translation started successfully!"
+msgstr "Перевод успешно начат!"
+
+#: .\translate\templates\translate\upload.html:810
+msgid "No task ID received"
+msgstr "Не получен ID задачи"
+
+#: .\translate\templates\translate\upload.html:814
+#: .\translate\templates\translate\upload.html:850
+msgid "Translation failed:"
+msgstr "Ошибка перевода:"
+
+#: .\translate\templates\translate\upload.html:838
+#: .\translate\templates\translate\upload.html:846
+msgid "Translation completed successfully!"
+msgstr "Перевод успешно завершен!"
+
+#: .\translate\templates\translate\upload.html:841
+msgid "Download Translated File"
+msgstr "Скачать переведенный файл"
+
+#: .\translate\templates\translate\upload.html:850
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#: .\translate\templates\translate\upload.html:856
+msgid "Translating..."
+msgstr "Выполняется перевод..."
+
+#: .\translate\templates\translate\upload.html:863
+msgid "Error checking translation status:"
+msgstr "Ошибка проверки статуса перевода:"
+
+#~ msgid "1,234 views"
+#~ msgstr "1 234 просмотра"
+
+#~ msgid "Table of Contents"
+#~ msgstr "Содержание"
+
+#~ msgid "Share this article"
+#~ msgstr "Поделиться этой статьей"
+
+#~ msgid "Previous"
+#~ msgstr "Предыдущая"
+
+#~ msgid "Previous Article Title"
+#~ msgstr "Заголовок предыдущей статьи"
+
+#~ msgid "All Posts"
+#~ msgstr "Все статьи"
+
+#~ msgid "Next"
+#~ msgstr "Следующая"
+
+#~ msgid "Next Article Title"
+#~ msgstr "Заголовок следующей статьи"
+
+#~ msgid "Related Articles"
+#~ msgstr "Похожие статьи"
+
+#~ msgid "Sample Related Article Title"
+#~ msgstr "Пример заголовка похожей статьи"
+
+#~ msgid "March 15, 2024"
+#~ msgstr "15 марта 2024"
+
+#~ msgid "Another Related Article"
+#~ msgstr "Другая похожая статья"
+
+#~ msgid "March 10, 2024"
+#~ msgstr "10 марта 2024"
+
+#~ msgid "Third Related Article"
+#~ msgstr "Третья похожая статья"
+
+#~ msgid "March 5, 2024"
+#~ msgstr "5 марта 2024"
+
+#~ msgid "Home"
+#~ msgstr "Главная"

@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ blog.title }} - {% trans "Blog - Transfile" %}{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Clean blog detail styles */
+    .blog-detail-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .blog-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .blog-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .blog-meta {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        color: #6b7280;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .blog-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .blog-image-wrapper {
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .blog-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--dark-color);
+        margin-bottom: 3rem;
+    }
+
+    .blog-content h1,
+    .blog-content h2,
+    .blog-content h3,
+    .blog-content h4,
+    .blog-content h5,
+    .blog-content h6 {
+        color: var(--dark-color);
+        font-weight: 600;
+        margin: 2rem 0 1rem;
+        line-height: 1.3;
+    }
+
+    .blog-content h2 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+
+    .blog-content p {
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-content blockquote {
+        border-left: 4px solid var(--primary-color);
+        background: rgba(79, 70, 229, 0.05);
+        padding: 1.5rem 2rem;
+        margin: 2rem 0;
+        border-radius: 0 12px 12px 0;
+        font-style: italic;
+    }
+
+    .blog-content ul,
+    .blog-content ol {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+    }
+
+    .blog-content li {
+        margin-bottom: 0.5rem;
+    }
+
+    .blog-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 2rem 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-content a {
+        color: var(--primary-color);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .blog-content a:hover {
+        border-bottom-color: var(--primary-color);
+    }
+
+    .blog-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 3rem 0;
+        padding: 2rem 0;
+        border-top: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .share-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+
+    .share-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .share-btn.facebook {
+        background: #1877f2;
+        color: white;
+    }
+
+    .share-btn.twitter {
+        background: #1da1f2;
+        color: white;
+    }
+
+    .share-btn.copy {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .back-to-blog {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .back-to-blog .btn {
+        border-radius: 8px;
+        padding: 0.75rem 2rem;
+        font-weight: 500;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .blog-detail-container {
+            padding: 1rem;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+        }
+
+        .blog-meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .blog-content {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .blog-actions {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .share-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="blog-detail-container">
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1 class="blog-title">{{ blog.title }}</h1>
+        <div class="blog-meta">
+            <div class="blog-meta-item">
+                <i class="bi bi-calendar3"></i>
+                <span>{{ blog.date|date:"F j, Y" }}</span>
+            </div>
+            <div class="blog-meta-item">
+                <i class="bi bi-clock"></i>
+                <span id="readingTime">{% trans "5 min read" %}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Image -->
+    {% if blog.image %}
+        <div class="blog-image-wrapper">
+            <img src="{{ blog.get_detail_image_url }}" 
+                 alt="{{ blog.title }}" 
+                 class="blog-image">
+        </div>
+    {% endif %}
+
+    <!-- Blog Content -->
+    <div class="blog-content" id="blogContent">
+        {{ blog.content|safe }}
+    </div>
+
+    <!-- Share Actions -->
+    <div class="blog-actions">
+        <button class="share-btn facebook" onclick="shareOnFacebook()">
+            <i class="bi bi-facebook"></i>
+            Facebook
+        </button>
+        <button class="share-btn twitter" onclick="shareOnTwitter()">
+            <i class="bi bi-twitter"></i>
+            Twitter
+        </button>
+        <button class="share-btn copy" onclick="copyToClipboard()">
+            <i class="bi bi-clipboard"></i>
+            {% trans "Copy Link" %}
+        </button>
+    </div>
+
+    <!-- Back to Blog -->
+    <div class="back-to-blog">
+        <a href="{% url 'blog_list' %}" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left me-2"></i>{% trans "Back to Blog" %}
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Calculate reading time
+        function calculateReadingTime() {
+            const text = document.getElementById('blogContent').textContent;
+            const wordsPerMinute = 200;
+            const wordCount = text.trim().split(/\s+/).length;
+            const readingTime = Math.ceil(wordCount / wordsPerMinute);
+            
+            document.getElementById('readingTime').textContent = readingTime + ' {% trans "min read" %}';
+        }
+        
+        calculateReadingTime();
+    });
+    
+    // Social sharing functions
+    function shareOnFacebook() {
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.title);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+    }
+    
+    function shareOnTwitter() {
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.title);
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank', 'width=600,height=400');
+    }
+    
+    function copyToClipboard() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('{% trans "Link copied to clipboard!" %}', 'success');
+        }).catch(() => {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = window.location.href;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast('{% trans "Link copied to clipboard!" %}', 'success');
+        });
+    }
+    
+    function showToast(message, type = 'info') {
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} position-fixed`;
+        toast.style.cssText = `
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            min-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        `;
+        toast.innerHTML = `
+            <i class="bi bi-${type === 'success' ? 'check-circle' : 'info-circle'} me-2"></i>
+            ${message}
+        `;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 3000);
+    }
+</script>
+{% endblock %}

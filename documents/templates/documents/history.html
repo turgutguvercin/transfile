@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Translation History - Transfile" %}{% endblock %}
+
+{% block page_header %}
+<div class="page-header">
+    <div class="container">
+        <h1 class="slide-up"><i class="bi bi-clock-history me-3"></i>{% trans "Translation History" %}</h1>
+        <p class="fade-in">{% blocktrans %}View and manage your translated documents{% endblocktrans %}</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    {% if documents %}
+        {% for document in documents %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card card-modern fade-in">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-file-earmark-text text-primary me-2" style="font-size: 1.5rem;"></i>
+                                <h5 class="card-title mb-0">{{ document.translated_file.name|slice:"8:" }}</h5>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        {% if document.task_id and document.status == 'completed' %}
+                                            <a class="dropdown-item" href="{% url 'download_file' document.task_id %}">
+                                                <i class="bi bi-download me-2"></i>{% trans "Download" %}
+                                            </a>
+                                        {% elif document.translated_file %}
+                                            <a class="dropdown-item" href="{{ document.translated_file.url }}" download>
+                                                <i class="bi bi-download me-2"></i>{% trans "Download" %}
+                                            </a>
+                                        {% else %}
+                                            <span class="dropdown-item text-muted">
+                                                <i class="bi bi-clock me-2"></i>{% trans "Processing..." %}
+                                            </span>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="card-text text-muted small mb-2">
+                            <i class="bi bi-calendar me-2"></i>
+                            {{ document.uploaded_at|date:"F j, Y" }}
+                        </p>
+                        <p class="card-text text-muted small mb-2">
+                            <i class="bi bi-clock me-2"></i>
+                            {{ document.uploaded_at|time:"g:i A" }}
+                        </p>
+                        <p class="card-text small mb-0">
+                            {% if document.status == 'completed' %}
+                                <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>{% trans "Completed" %}</span>
+                            {% elif document.status == 'processing' %}
+                                <span class="badge bg-warning"><i class="bi bi-clock me-1"></i>{% trans "Processing" %}</span>
+                            {% elif document.status == 'failed' %}
+                                <span class="badge bg-danger"><i class="bi bi-x-circle me-1"></i>{% trans "Failed" %}</span>
+                            {% else %}
+                                <span class="badge bg-secondary"><i class="bi bi-circle me-1"></i>{% trans "Pending" %}</span>
+                            {% endif %}
+                            {% if document.source_language and document.target_language %}
+                                <span class="badge bg-info ms-2">{{ document.source_language|upper }} → {{ document.target_language|upper }}</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="col-12">
+            <div class="card card-modern text-center py-5">
+                <div class="card-body">
+                    <i class="bi bi-file-earmark-x text-muted mb-3" style="font-size: 3rem;"></i>
+                    <h3>{% trans "No Documents Yet" %}</h3>
+                    <p class="text-muted">{% blocktrans %}You haven't translated any documents yet.{% endblocktrans %}</p>
+                    <a href="{% url 'upload_file' %}" class="btn btn-primary">
+                        <i class="bi bi-upload me-2"></i>{% trans "Translate Your First Document" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Enable tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    // Confirm delete
+    document.querySelectorAll('form[action*="delete_document"]').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            if (!confirm('{% trans "Are you sure you want to delete this document?" %}')) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>
+{% endblock %}

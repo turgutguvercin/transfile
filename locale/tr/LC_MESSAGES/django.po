@@ -1,0 +1,845 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:49+0300\n"
+"PO-Revision-Date: 2025-10-06 11:00+0300\n"
+"Last-Translator: ChatGPT <translate@transfile.ai>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\accounts\templates\registration\login.html:7
+msgid "Login - Transfile"
+msgstr "Giriş - Transfile"
+
+#: .\accounts\templates\registration\login.html:237
+msgid "Welcome Back"
+msgstr "Tekrar Hoşgeldiniz"
+
+#: .\accounts\templates\registration\login.html:238
+msgid "Sign in to Transfile"
+msgstr "Transfile'a Giriş Yapın"
+
+#: .\accounts\templates\registration\login.html:245
+#: .\accounts\templates\registration\register.html:280
+msgid "Please correct the following errors:"
+msgstr "Lütfen aşağıdaki hataları düzeltin:"
+
+#: .\accounts\templates\registration\login.html:262
+#: .\accounts\templates\registration\login.html:266
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: .\accounts\templates\registration\login.html:282
+#: .\accounts\templates\registration\login.html:285
+#: .\accounts\templates\registration\register.html:340
+#: .\accounts\templates\registration\register.html:343
+msgid "Password"
+msgstr "Şifre"
+
+#: .\accounts\templates\registration\login.html:299
+#: .\accounts\templates\registration\login.html:336
+#: .\translate\templates\translate\home.html:35
+msgid "Sign In"
+msgstr "Giriş Yap"
+
+#: .\accounts\templates\registration\login.html:309
+msgid "Don't have an account?"
+msgstr "Hesabınız yok mu?"
+
+#: .\accounts\templates\registration\login.html:310
+msgid "Create one here"
+msgstr "Buradan oluşturun"
+
+#: .\accounts\templates\registration\login.html:314
+msgid "Forgot your password?"
+msgstr "Şifrenizi mi unuttunuz?"
+
+#: .\accounts\templates\registration\login.html:330
+msgid "Signing In..."
+msgstr "Giriş yapılıyor..."
+
+#: .\accounts\templates\registration\register.html:7
+msgid "Register - Transfile"
+msgstr "Kayıt - Transfile"
+
+#: .\accounts\templates\registration\register.html:272
+msgid "Join Transfile"
+msgstr "Transfile'a Katılın"
+
+#: .\accounts\templates\registration\register.html:273
+msgid "Create your account to start translating"
+msgstr "Çeviriye başlamak için hesabınızı oluşturun"
+
+#: .\accounts\templates\registration\register.html:290
+msgid "Password Requirements"
+msgstr "Şifre Gereksinimleri"
+
+#: .\accounts\templates\registration\register.html:293
+msgid "At least 8 characters long"
+msgstr "En az 8 karakter uzunluğunda"
+
+#: .\accounts\templates\registration\register.html:297
+msgid "Cannot be too similar to personal information"
+msgstr "Kişisel bilgilerinize çok benzer olamaz"
+
+#: .\accounts\templates\registration\register.html:301
+msgid "Cannot be a commonly used password"
+msgstr "Yaygın kullanılan bir şifre olamaz"
+
+#: .\accounts\templates\registration\register.html:305
+msgid "Cannot be entirely numeric"
+msgstr "Tamamen sayısal olamaz"
+
+#: .\accounts\templates\registration\register.html:316
+msgid "email"
+msgstr "e-posta"
+
+#: .\accounts\templates\registration\register.html:320
+msgid "Email Address"
+msgstr "E-posta Adresi"
+
+#: .\accounts\templates\registration\register.html:362
+#: .\accounts\templates\registration\register.html:365
+msgid "Confirm Password"
+msgstr "Şifreyi Onayla"
+
+#: .\accounts\templates\registration\register.html:382
+#: .\accounts\templates\registration\register.html:414
+msgid "Create Account"
+msgstr "Hesap Oluştur"
+
+#: .\accounts\templates\registration\register.html:391
+msgid "Already have an account?"
+msgstr "Zaten hesabınız var mı?"
+
+#: .\accounts\templates\registration\register.html:392
+msgid "Sign in here"
+msgstr "Buradan giriş yapın"
+
+#: .\accounts\templates\registration\register.html:408
+msgid "Creating Account..."
+msgstr "Hesap oluşturuluyor..."
+
+#: .\accounts\templates\registration\register.html:435
+#: .\accounts\templates\registration\register.html:443
+msgid "Passwords do not match"
+msgstr "Şifreler eşleşmiyor"
+
+#: .\blog\admin.py:21
+msgid "Title"
+msgstr "Başlık"
+
+#: .\blog\admin.py:27
+msgid "Languages"
+msgstr "Diller"
+
+#: .\blog\models.py:15
+msgid "Blog Title"
+msgstr "Blog Başlığı"
+
+#: .\blog\models.py:16
+msgid "Blog Content"
+msgstr "Blog İçeriği"
+
+#: .\blog\models.py:18
+msgid "SEO Title"
+msgstr "SEO Başlığı"
+
+#: .\blog\models.py:19
+msgid "SEO Description"
+msgstr "SEO Açıklaması"
+
+#: .\blog\models.py:21
+msgid "Blog Image"
+msgstr "Blog Resmi"
+
+#: .\blog\models.py:22
+msgid "Register Date"
+msgstr "Kayıt Tarihi"
+
+#: .\blog\models.py:26
+msgid "Blog Yazısı"
+msgstr "Blog Yazısı"
+
+#: .\blog\models.py:27
+msgid "Blog Yazıları"
+msgstr "Blog Yazıları"
+
+#: .\blog\templates\blogs\blog_detail.html:4
+#: .\blog\templates\blogs\blog_list.html:4
+msgid "Blog - Transfile"
+msgstr "Blog - Transfile"
+
+#: .\blog\templates\blogs\blog_detail.html:232
+msgid "5 min read"
+msgstr "5 dk okuma"
+
+#: .\blog\templates\blogs\blog_detail.html:263
+msgid "Copy Link"
+msgstr "Bağlantıyı Kopyala"
+
+#: .\blog\templates\blogs\blog_detail.html:270
+#, fuzzy
+#| msgid "Back to Home"
+msgid "Back to Blog"
+msgstr "Ana Sayfaya Dön"
+
+#: .\blog\templates\blogs\blog_detail.html:286
+msgid "min read"
+msgstr "dk okuma"
+
+#: .\blog\templates\blogs\blog_detail.html:307
+#: .\blog\templates\blogs\blog_detail.html:316
+#: .\blog\templates\blogs\blog_list.html:504
+msgid "Link copied to clipboard!"
+msgstr "Bağlantı panoya kopyalandı!"
+
+#: .\blog\templates\blogs\blog_list.html:10
+msgid "Blog & Insights"
+msgstr "Blog ve İçgörüler"
+
+#: .\blog\templates\blogs\blog_list.html:12
+msgid "Discover translation tips, industry insights, and latest updates"
+msgstr "Çeviri ipuçları, sektör içgörüleri ve son güncellemeleri keşfedin"
+
+#: .\blog\templates\blogs\blog_list.html:30
+msgid "Search blog posts..."
+msgstr "Blog yazılarını ara..."
+
+#: .\blog\templates\blogs\blog_list.html:38
+msgid "Latest"
+msgstr "En Son"
+
+#: .\blog\templates\blogs\blog_list.html:42
+msgid "Popular"
+msgstr "Popüler"
+
+#: .\blog\templates\blogs\blog_list.html:101
+msgid "Read More"
+msgstr "Devamını Oku"
+
+#: .\blog\templates\blogs\blog_list.html:124
+msgid "Blog pagination"
+msgstr "Blog sayfalama"
+
+#: .\blog\templates\blogs\blog_list.html:176
+msgid "No Blog Posts Yet"
+msgstr "Henüz blog yazısı yok"
+
+#: .\blog\templates\blogs\blog_list.html:178
+msgid "We're working on creating amazing content for you. Check back soon!"
+msgstr "Sizin için harika içerik oluşturuyoruz. Yakında tekrar kontrol edin!"
+
+#: .\blog\templates\blogs\blog_list.html:181
+msgid "Back to Home"
+msgstr "Ana Sayfaya Dön"
+
+#: .\blog\templates\blogs\blog_list.html:196
+msgid "Stay Updated"
+msgstr "Güncel Kalın"
+
+#: .\blog\templates\blogs\blog_list.html:198
+msgid ""
+"Subscribe to our newsletter for the latest translation tips and industry "
+"insights."
+msgstr ""
+"En son çeviri ipuçları ve sektör içgörüleri için bültenimize abone olun."
+
+#: .\blog\templates\blogs\blog_list.html:204
+msgid "Enter your email address"
+msgstr "E-posta adresinizi girin"
+
+#: .\blog\templates\blogs\blog_list.html:207
+msgid "Subscribe"
+msgstr "Abone Ol"
+
+#: .\blog\templates\blogs\blog_list.html:519
+msgid "Please enter your email address"
+msgstr "Lütfen e-posta adresinizi girin"
+
+#: .\blog\templates\blogs\blog_list.html:524
+msgid "Please enter a valid email address"
+msgstr "Lütfen geçerli bir e-posta adresi girin"
+
+#: .\blog\templates\blogs\blog_list.html:531
+msgid "Subscribing..."
+msgstr "Abone olunuyor..."
+
+#: .\blog\templates\blogs\blog_list.html:538
+msgid "Successfully subscribed to newsletter!"
+msgstr "Bültene başarıyla abone olundu!"
+
+#: .\blog\templates\blogs\blog_list.html:578
+msgid "No posts found"
+msgstr "Yazı bulunamadı"
+
+#: .\blog\templates\blogs\blog_list.html:579
+msgid "Try adjusting your search terms"
+msgstr "Arama terimlerinizi ayarlamayı deneyin"
+
+#: .\documents\templates\documents\history.html:4
+msgid "Translation History - Transfile"
+msgstr "Çeviri Geçmişi - Transfile"
+
+#: .\documents\templates\documents\history.html:9
+msgid "Translation History"
+msgstr "Çeviri Geçmişi"
+
+#: .\documents\templates\documents\history.html:10
+msgid "View and manage your translated documents"
+msgstr "Çevirilen belgelerinizi görüntüleyin ve yönetin"
+
+#: .\documents\templates\documents\history.html:35
+#: .\documents\templates\documents\history.html:39
+msgid "Download"
+msgstr "İndir"
+
+#: .\documents\templates\documents\history.html:43
+msgid "Processing..."
+msgstr "İşleniyor..."
+
+#: .\documents\templates\documents\history.html:61
+msgid "Completed"
+msgstr "Tamamlandı"
+
+#: .\documents\templates\documents\history.html:63
+msgid "Processing"
+msgstr "İşleniyor"
+
+#: .\documents\templates\documents\history.html:65
+msgid "Failed"
+msgstr "Başarısız"
+
+#: .\documents\templates\documents\history.html:67
+msgid "Pending"
+msgstr "Beklemede"
+
+#: .\documents\templates\documents\history.html:82
+msgid "No Documents Yet"
+msgstr "Henüz Belge Yok"
+
+#: .\documents\templates\documents\history.html:83
+msgid "You haven't translated any documents yet."
+msgstr "Henüz hiç belge çevirmediniz."
+
+#: .\documents\templates\documents\history.html:85
+msgid "Translate Your First Document"
+msgstr "İlk Belgenizi Çevirin"
+
+#: .\documents\templates\documents\history.html:105
+msgid "Are you sure you want to delete this document?"
+msgstr "Bu belgeyi silmek istediğinizden emin misiniz?"
+
+#: .\templates\base.html:408
+msgid "Transfile"
+msgstr "Transfile"
+
+#: .\templates\base.html:420
+msgid "Blog"
+msgstr ""
+
+#: .\templates\base.html:428
+msgid "Translate"
+msgstr "Çevir"
+
+#: .\templates\base.html:433
+msgid "History"
+msgstr "Geçmiş"
+
+#: .\templates\base.html:443
+msgid "Credits"
+msgstr "Krediler"
+
+#: .\templates\base.html:481
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: .\templates\base.html:489
+msgid "Logout"
+msgstr "Çıkış Yap"
+
+#: .\templates\base.html:497
+msgid "Login"
+msgstr "Giriş Yap"
+
+#: .\templates\base.html:502
+msgid "Sign Up"
+msgstr "Kayıt Ol"
+
+#: .\templates\base.html:549
+msgid "Professional document translation powered by AI"
+msgstr "Yapay zeka destekli profesyonel belge çevirisi"
+
+#: .\translate\templates\translate\home.html:5
+msgid "Home - Transfile"
+msgstr "Ana Sayfa - Transfile"
+
+#: .\translate\templates\translate\home.html:14
+msgid "Welcome to Transfile"
+msgstr "Transfile'a Hoş Geldiniz"
+
+#: .\translate\templates\translate\home.html:17
+msgid ""
+"Professional document translation powered by cutting-edge AI technology.\n"
+"                    Transform your documents across multiple languages with "
+"precision and speed."
+msgstr ""
+"En son yapay zeka teknolojisiyle desteklenen profesyonel belge çevirisi.\n"
+"                    Belgelerinizi birden çok dile hassasiyet ve hızla "
+"dönüştürün."
+
+#: .\translate\templates\translate\home.html:23
+msgid "Start Translating"
+msgstr "Çeviriye Başla"
+
+#: .\translate\templates\translate\home.html:26
+msgid "Learn More"
+msgstr "Daha Fazla Bilgi"
+
+#: .\translate\templates\translate\home.html:32
+msgid "Get Started Free"
+msgstr "Ücretsiz Başlayın"
+
+#: .\translate\templates\translate\home.html:51
+msgid "Why Choose Transfile?"
+msgstr "Neden Transfile?"
+
+#: .\translate\templates\translate\home.html:53
+msgid ""
+"Experience the future of document translation with our advanced AI-powered "
+"platform"
+msgstr ""
+"Gelişmiş yapay zeka destekli platformumuzla belge çevirisinin geleceğini "
+"deneyimleyin"
+
+#: .\translate\templates\translate\home.html:64
+msgid "Lightning Fast"
+msgstr "Yıldırım Hızında"
+
+#: .\translate\templates\translate\home.html:66
+msgid ""
+"Advanced AI algorithms deliver professional translations in seconds, not "
+"hours.\n"
+"                        Process multiple documents simultaneously with our "
+"efficient queue system."
+msgstr ""
+"Gelişmiş yapay zeka algoritmaları, saatler değil saniyeler içinde "
+"profesyonel çeviriler sunar.\n"
+"                        Verimli sıra sistemimizle birden çok belgeyi aynı "
+"anda işleyin."
+
+#: .\translate\templates\translate\home.html:77
+msgid "Accurate & Reliable"
+msgstr "Doğru ve Güvenilir"
+
+#: .\translate\templates\translate\home.html:79
+msgid ""
+"Industry-leading accuracy powered by state-of-the-art machine learning "
+"models.\n"
+"                        Trusted by professionals worldwide for critical "
+"document translation."
+msgstr ""
+"En son teknoloji makine öğrenimi modelleriyle desteklenen sektör lideri "
+"doğruluk.\n"
+"                        Kritik belge çevirisi için dünya çapında "
+"profesyoneller tarafından güvenilen."
+
+#: .\translate\templates\translate\home.html:90
+msgid "Multiple Formats"
+msgstr "Çoklu Formatlar"
+
+#: .\translate\templates\translate\home.html:92
+msgid ""
+"Support for PDF, DOCX, XLSX, CSV and more. Preserve formatting,\n"
+"                        layouts, and styles while translating your important "
+"documents."
+msgstr ""
+"PDF, DOCX, XLSX, CSV ve daha fazlası için destek. Önemli belgelerinizi "
+"çevirirken\n"
+"                        biçimlendirme, düzen ve stilleri koruyun."
+
+#: .\translate\templates\translate\home.html:103
+msgid "100+ Languages"
+msgstr "100+ Dil"
+
+#: .\translate\templates\translate\home.html:105
+msgid ""
+"Translate between over 100 languages with native-level fluency.\n"
+"                        From major world languages to regional dialects and "
+"technical terminology."
+msgstr ""
+"100'den fazla dil arasında ana dil akıcılığında çeviri yapın.\n"
+"                        Büyük dünya dillerinden bölgesel lehçelere ve teknik "
+"terminolojiye kadar."
+
+#: .\translate\templates\translate\home.html:116
+msgid "Secure & Private"
+msgstr "Güvenli ve Özel"
+
+#: .\translate\templates\translate\home.html:118
+msgid ""
+"Enterprise-grade security with end-to-end encryption. Your documents\n"
+"                        are automatically deleted after processing to ensure "
+"complete privacy."
+msgstr ""
+"Uçtan uca şifreleme ile kurumsal düzeyde güvenlik. Belgeleriniz\n"
+"                        tam gizlilik sağlamak için işlendikten sonra "
+"otomatik olarak silinir."
+
+#: .\translate\templates\translate\home.html:129
+msgid "Cloud-Powered"
+msgstr "Bulut Destekli"
+
+#: .\translate\templates\translate\home.html:131
+msgid ""
+"Access your translations from anywhere with our cloud-based platform.\n"
+"                        No software installation required - just upload and "
+"translate."
+msgstr ""
+"Bulut tabanlı platformumuzla çevirilerinize her yerden erişin.\n"
+"                        Yazılım kurulumu gerekmez - sadece yükleyin ve "
+"çevirin."
+
+#: .\translate\templates\translate\home.html:145
+msgid "How It Works"
+msgstr "Nasıl Çalışır"
+
+#: .\translate\templates\translate\home.html:147
+msgid "Get professional translations in just three simple steps"
+msgstr "Sadece üç basit adımda profesyonel çeviriler alın"
+
+#: .\translate\templates\translate\home.html:162
+msgid "Upload Document"
+msgstr "Belge Yükle"
+
+#: .\translate\templates\translate\home.html:164
+msgid ""
+"Simply drag and drop your file or click to browse.\n"
+"                    We support all major document formats including PDF, "
+"Word, Excel, and more."
+msgstr ""
+"Dosyanızı sürükleyip bırakın veya göz atmak için tıklayın.\n"
+"                    PDF, Word, Excel ve daha fazlası dahil tüm önemli belge "
+"formatlarını destekliyoruz."
+
+#: .\translate\templates\translate\home.html:178
+msgid "Select Languages"
+msgstr "Dilleri Seçin"
+
+#: .\translate\templates\translate\home.html:180
+msgid ""
+"Choose your source and target languages from our extensive list.\n"
+"                    Our AI automatically detects the source language if "
+"you're unsure."
+msgstr ""
+"Geniş listemizden kaynak ve hedef dillerinizi seçin.\n"
+"                    Emin değilseniz yapay zekamız kaynak dili otomatik "
+"olarak algılar."
+
+#: .\translate\templates\translate\home.html:191
+msgid "Download Result"
+msgstr "Sonucu İndir"
+
+#: .\translate\templates\translate\home.html:193
+msgid ""
+"Receive your professionally translated document in the same format.\n"
+"                    All formatting, images, and layouts are perfectly "
+"preserved."
+msgstr ""
+"Profesyonel olarak çevrilmiş belgenizi aynı formatta alın.\n"
+"                    Tüm biçimlendirme, görseller ve düzenler mükemmel "
+"şekilde korunur."
+
+#: .\translate\templates\translate\home.html:208
+msgid "Ready to Transform Your Documents?"
+msgstr "Belgelerinizi Dönüştürmeye Hazır mısınız?"
+
+#: .\translate\templates\translate\home.html:210
+msgid ""
+"Join thousands of professionals who trust Transfile for their translation "
+"needs.\n"
+"                    Start your journey today and experience the power of AI-"
+"driven translation."
+msgstr ""
+"Çeviri ihtiyaçları için Transfile'a güvenen binlerce profesyonele katılın.\n"
+"                    Yolculuğunuza bugün başlayın ve yapay zeka destekli "
+"çevirinin gücünü deneyimleyin."
+
+#: .\translate\templates\translate\home.html:215
+msgid "Upload Your First Document"
+msgstr "İlk Belgenizi Yükleyin"
+
+#: .\translate\templates\translate\home.html:220
+msgid "Start Free Trial"
+msgstr "Ücretsiz Denemeyi Başlat"
+
+#: .\translate\templates\translate\upload.html:4
+msgid "Upload & Translate - Transfile"
+msgstr "Yükle ve Çevir - Transfile"
+
+#: .\translate\templates\translate\upload.html:9
+#: .\translate\templates\translate\upload.html:345
+msgid "Upload & Translate"
+msgstr "Yükle ve Çevir"
+
+#: .\translate\templates\translate\upload.html:10
+msgid ""
+"Upload your documents and get professional AI-powered translations instantly"
+msgstr ""
+"Belgelerinizi yükleyin ve anında yapay zeka destekli profesyonel çeviriler "
+"alın"
+
+#: .\translate\templates\translate\upload.html:267
+msgid "Document Translation"
+msgstr "Belge Çevirisi"
+
+#: .\translate\templates\translate\upload.html:269
+msgid "Select your source and target languages, then upload your document"
+msgstr "Kaynak ve hedef dillerinizi seçin, ardından belgenizi yükleyin"
+
+#: .\translate\templates\translate\upload.html:279
+msgid "Source Language"
+msgstr "Kaynak Dil"
+
+#: .\translate\templates\translate\upload.html:282
+msgid "Choose source language..."
+msgstr "Kaynak dili seçin..."
+
+#: .\translate\templates\translate\upload.html:283
+#: .\translate\templates\translate\upload.html:304
+msgid "🇹🇷 Turkish"
+msgstr "🇹🇷 Türkçe"
+
+#: .\translate\templates\translate\upload.html:284
+#: .\translate\templates\translate\upload.html:305
+msgid "🇺🇸 English"
+msgstr "🇺🇸 İngilizce"
+
+#: .\translate\templates\translate\upload.html:285
+#: .\translate\templates\translate\upload.html:306
+msgid "🇪🇸 Spanish"
+msgstr "🇪🇸 İspanyolca"
+
+#: .\translate\templates\translate\upload.html:286
+#: .\translate\templates\translate\upload.html:307
+msgid "🇫🇷 French"
+msgstr "🇫🇷 Fransızca"
+
+#: .\translate\templates\translate\upload.html:287
+#: .\translate\templates\translate\upload.html:308
+msgid "🇩🇪 German"
+msgstr "🇩🇪 Almanca"
+
+#: .\translate\templates\translate\upload.html:288
+#: .\translate\templates\translate\upload.html:309
+msgid "🇮🇹 Italian"
+msgstr "🇮🇹 İtalyanca"
+
+#: .\translate\templates\translate\upload.html:289
+#: .\translate\templates\translate\upload.html:310
+msgid "🇵🇹 Portuguese"
+msgstr "🇵🇹 Portekizce"
+
+#: .\translate\templates\translate\upload.html:290
+#: .\translate\templates\translate\upload.html:311
+msgid "🇷🇺 Russian"
+msgstr "🇷🇺 Rusça"
+
+#: .\translate\templates\translate\upload.html:291
+#: .\translate\templates\translate\upload.html:312
+msgid "🇯🇵 Japanese"
+msgstr "🇯🇵 Japonca"
+
+#: .\translate\templates\translate\upload.html:292
+#: .\translate\templates\translate\upload.html:313
+msgid "🇰🇷 Korean"
+msgstr "🇰🇷 Korece"
+
+#: .\translate\templates\translate\upload.html:293
+#: .\translate\templates\translate\upload.html:314
+msgid "🇨🇳 Chinese"
+msgstr "🇨🇳 Çince"
+
+#: .\translate\templates\translate\upload.html:294
+msgid "🔍 Auto-detect"
+msgstr "🔍 Otomatik algıla"
+
+#: .\translate\templates\translate\upload.html:300
+msgid "Target Language"
+msgstr "Hedef Dil"
+
+#: .\translate\templates\translate\upload.html:303
+msgid "Choose target language..."
+msgstr "Hedef dili seçin..."
+
+#: .\translate\templates\translate\upload.html:325
+msgid "Drag and drop your document here"
+msgstr "Belgenizi buraya sürükleyip bırakın"
+
+#: .\translate\templates\translate\upload.html:326
+msgid "or click to browse files"
+msgstr "veya dosyalara göz atmak için tıklayın"
+
+#: .\translate\templates\translate\upload.html:331
+msgid "Choose File"
+msgstr "Dosya Seç"
+
+#: .\translate\templates\translate\upload.html:335
+msgid "Supported formats: PDF, XLSX, DOCX, CSV, (Max 25MB)"
+msgstr "Desteklenen formatlar: PDF, XLSX, DOCX, CSV, (Maks. 25MB)"
+
+#: .\translate\templates\translate\upload.html:416
+msgid "Unsupported file type. Allowed types: PDF, DOCX, XLSX, CSV"
+msgstr "Desteklenmeyen dosya türü. İzin verilen türler: PDF, DOCX, XLSX, CSV"
+
+#: .\translate\templates\translate\upload.html:436
+msgid "Size:"
+msgstr "Boyut:"
+
+#: .\translate\templates\translate\upload.html:440
+msgid "Type:"
+msgstr "Tür:"
+
+#: .\translate\templates\translate\upload.html:460
+msgid "Source and target languages must be different"
+msgstr "Kaynak ve hedef diller farklı olmalıdır"
+
+#: .\translate\templates\translate\upload.html:560
+msgid "Please select a file first"
+msgstr "Lütfen önce bir dosya seçin"
+
+#: .\translate\templates\translate\upload.html:568
+msgid "Please select both source and target languages"
+msgstr "Lütfen hem kaynak hem de hedef dilleri seçin"
+
+#: .\translate\templates\translate\upload.html:619
+msgid "No file path received from server"
+msgstr "Sunucudan dosya yolu alınamadı"
+
+#: .\translate\templates\translate\upload.html:622
+msgid "Upload failed"
+msgstr "Yükleme başarısız"
+
+#: .\translate\templates\translate\upload.html:633
+msgid "Network error occurred"
+msgstr "Ağ hatası oluştu"
+
+#: .\translate\templates\translate\upload.html:642
+msgid "Upload failed:"
+msgstr "Yükleme başarısız:"
+
+#: .\translate\templates\translate\upload.html:737
+msgid "Chunk upload failed"
+msgstr "Parça yükleme başarısız"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "Chunk"
+msgstr "Parça"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "failed after"
+msgstr "sonra başarısız oldu"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "attempts:"
+msgstr "deneme:"
+
+#: .\translate\templates\translate\upload.html:777
+msgid "Starting translation..."
+msgstr "Çeviri başlatılıyor..."
+
+#: .\translate\templates\translate\upload.html:796
+msgid "Translation failed"
+msgstr "Çeviri başarısız"
+
+#: .\translate\templates\translate\upload.html:807
+msgid "Translation started successfully!"
+msgstr "Çeviri başarıyla başlatıldı!"
+
+#: .\translate\templates\translate\upload.html:810
+msgid "No task ID received"
+msgstr "Görev kimliği alınamadı"
+
+#: .\translate\templates\translate\upload.html:814
+#: .\translate\templates\translate\upload.html:850
+msgid "Translation failed:"
+msgstr "Çeviri başarısız:"
+
+#: .\translate\templates\translate\upload.html:838
+#: .\translate\templates\translate\upload.html:846
+msgid "Translation completed successfully!"
+msgstr "Çeviri başarıyla tamamlandı!"
+
+#: .\translate\templates\translate\upload.html:841
+msgid "Download Translated File"
+msgstr "Çevrilmiş Dosyayı İndir"
+
+#: .\translate\templates\translate\upload.html:850
+msgid "Unknown error"
+msgstr "Bilinmeyen hata"
+
+#: .\translate\templates\translate\upload.html:856
+msgid "Translating..."
+msgstr "Çevriliyor..."
+
+#: .\translate\templates\translate\upload.html:863
+msgid "Error checking translation status:"
+msgstr "Çeviri durumu kontrol edilirken hata:"
+
+#~ msgid "1,234 views"
+#~ msgstr "1.234 görüntüleme"
+
+#~ msgid "Table of Contents"
+#~ msgstr "İçindekiler"
+
+#~ msgid "Share this article"
+#~ msgstr "Bu makaleyi paylaş"
+
+#~ msgid "Previous"
+#~ msgstr "Önceki"
+
+#~ msgid "Previous Article Title"
+#~ msgstr "Önceki Makale Başlığı"
+
+#~ msgid "All Posts"
+#~ msgstr "Tüm Yazılar"
+
+#~ msgid "Next"
+#~ msgstr "Sonraki"
+
+#~ msgid "Next Article Title"
+#~ msgstr "Sonraki Makale Başlığı"
+
+#~ msgid "Related Articles"
+#~ msgstr "İlgili Makaleler"
+
+#~ msgid "Sample Related Article Title"
+#~ msgstr "Örnek İlgili Makale Başlığı"
+
+#~ msgid "March 15, 2024"
+#~ msgstr "15 Mart 2024"
+
+#~ msgid "Another Related Article"
+#~ msgstr "Başka Bir İlgili Makale"
+
+#~ msgid "March 10, 2024"
+#~ msgstr "10 Mart 2024"
+
+#~ msgid "Third Related Article"
+#~ msgstr "Üçüncü İlgili Makale"
+
+#~ msgid "March 5, 2024"
+#~ msgstr "5 Mart 2024"
+
+#~ msgid "Home"
+#~ msgstr "Ana Sayfa"

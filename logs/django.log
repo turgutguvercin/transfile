@@ -1,0 +1,5 @@
+INFO 2025-09-02 17:10:15,191 autoreload 20856 12976 Watching for file changes with StatReloader
+INFO 2025-09-02 17:10:22,013 autoreload 20856 12976 C:\Users\trg\Desktop\translate\translator\translator\settings.py changed, reloading.
+INFO 2025-09-02 17:10:23,175 autoreload 30232 2844 Watching for file changes with StatReloader
+INFO 2025-09-02 17:15:39,178 autoreload 30232 2844 C:\Users\trg\Desktop\translate\translator\translator\settings.py changed, reloading.
+INFO 2025-09-02 17:15:40,432 autoreload 32956 17260 Watching for file changes with StatReloader

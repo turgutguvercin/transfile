@@ -1,0 +1,834 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 10:49+0300\n"
+"PO-Revision-Date: 2025-10-06 11:00+0300\n"
+"Last-Translator: ChatGPT <translate@transfile.ai>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\accounts\templates\registration\login.html:7
+msgid "Login - Transfile"
+msgstr "ログイン - Transfile"
+
+#: .\accounts\templates\registration\login.html:237
+msgid "Welcome Back"
+msgstr "おかえりなさい"
+
+#: .\accounts\templates\registration\login.html:238
+msgid "Sign in to Transfile"
+msgstr "Transfileにログイン"
+
+#: .\accounts\templates\registration\login.html:245
+#: .\accounts\templates\registration\register.html:280
+msgid "Please correct the following errors:"
+msgstr "以下のエラーを修正してください："
+
+#: .\accounts\templates\registration\login.html:262
+#: .\accounts\templates\registration\login.html:266
+msgid "Username"
+msgstr "ユーザー名"
+
+#: .\accounts\templates\registration\login.html:282
+#: .\accounts\templates\registration\login.html:285
+#: .\accounts\templates\registration\register.html:340
+#: .\accounts\templates\registration\register.html:343
+msgid "Password"
+msgstr "パスワード"
+
+#: .\accounts\templates\registration\login.html:299
+#: .\accounts\templates\registration\login.html:336
+#: .\translate\templates\translate\home.html:35
+msgid "Sign In"
+msgstr "ログイン"
+
+#: .\accounts\templates\registration\login.html:309
+msgid "Don't have an account?"
+msgstr "アカウントをお持ちでない方"
+
+#: .\accounts\templates\registration\login.html:310
+msgid "Create one here"
+msgstr "こちらで作成"
+
+#: .\accounts\templates\registration\login.html:314
+msgid "Forgot your password?"
+msgstr "パスワードをお忘れですか？"
+
+#: .\accounts\templates\registration\login.html:330
+msgid "Signing In..."
+msgstr "ログイン中..."
+
+#: .\accounts\templates\registration\register.html:7
+msgid "Register - Transfile"
+msgstr "登録 - Transfile"
+
+#: .\accounts\templates\registration\register.html:272
+msgid "Join Transfile"
+msgstr "Transfileに参加"
+
+#: .\accounts\templates\registration\register.html:273
+msgid "Create your account to start translating"
+msgstr "翻訳を始めるためにアカウントを作成"
+
+#: .\accounts\templates\registration\register.html:290
+msgid "Password Requirements"
+msgstr "パスワード要件"
+
+#: .\accounts\templates\registration\register.html:293
+msgid "At least 8 characters long"
+msgstr "8文字以上"
+
+#: .\accounts\templates\registration\register.html:297
+msgid "Cannot be too similar to personal information"
+msgstr "個人情報と似すぎないこと"
+
+#: .\accounts\templates\registration\register.html:301
+msgid "Cannot be a commonly used password"
+msgstr "一般的なパスワードは使用できません"
+
+#: .\accounts\templates\registration\register.html:305
+msgid "Cannot be entirely numeric"
+msgstr "数字のみは使用できません"
+
+#: .\accounts\templates\registration\register.html:316
+msgid "email"
+msgstr "メール"
+
+#: .\accounts\templates\registration\register.html:320
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: .\accounts\templates\registration\register.html:362
+#: .\accounts\templates\registration\register.html:365
+msgid "Confirm Password"
+msgstr "パスワードの確認"
+
+#: .\accounts\templates\registration\register.html:382
+#: .\accounts\templates\registration\register.html:414
+msgid "Create Account"
+msgstr "アカウント作成"
+
+#: .\accounts\templates\registration\register.html:391
+msgid "Already have an account?"
+msgstr "すでにアカウントをお持ちですか？"
+
+#: .\accounts\templates\registration\register.html:392
+msgid "Sign in here"
+msgstr "こちらからログイン"
+
+#: .\accounts\templates\registration\register.html:408
+msgid "Creating Account..."
+msgstr "アカウント作成中..."
+
+#: .\accounts\templates\registration\register.html:435
+#: .\accounts\templates\registration\register.html:443
+msgid "Passwords do not match"
+msgstr "パスワードが一致しません"
+
+#: .\blog\admin.py:21
+msgid "Title"
+msgstr "タイトル"
+
+#: .\blog\admin.py:27
+msgid "Languages"
+msgstr "言語"
+
+#: .\blog\models.py:15
+msgid "Blog Title"
+msgstr "ブログタイトル"
+
+#: .\blog\models.py:16
+msgid "Blog Content"
+msgstr "ブログコンテンツ"
+
+#: .\blog\models.py:18
+msgid "SEO Title"
+msgstr "SEOタイトル"
+
+#: .\blog\models.py:19
+msgid "SEO Description"
+msgstr "SEO説明"
+
+#: .\blog\models.py:21
+msgid "Blog Image"
+msgstr "ブログ画像"
+
+#: .\blog\models.py:22
+msgid "Register Date"
+msgstr "登録日"
+
+#: .\blog\models.py:26
+msgid "Blog Yazısı"
+msgstr "ブログ記事"
+
+#: .\blog\models.py:27
+msgid "Blog Yazıları"
+msgstr "ブログ記事一覧"
+
+#: .\blog\templates\blogs\blog_detail.html:4
+#: .\blog\templates\blogs\blog_list.html:4
+msgid "Blog - Transfile"
+msgstr "ブログ - Transfile"
+
+#: .\blog\templates\blogs\blog_detail.html:232
+msgid "5 min read"
+msgstr "5分で読める"
+
+#: .\blog\templates\blogs\blog_detail.html:263
+msgid "Copy Link"
+msgstr "リンクをコピー"
+
+#: .\blog\templates\blogs\blog_detail.html:270
+#, fuzzy
+#| msgid "Back to Home"
+msgid "Back to Blog"
+msgstr "ホームに戻る"
+
+#: .\blog\templates\blogs\blog_detail.html:286
+msgid "min read"
+msgstr "分で読める"
+
+#: .\blog\templates\blogs\blog_detail.html:307
+#: .\blog\templates\blogs\blog_detail.html:316
+#: .\blog\templates\blogs\blog_list.html:504
+msgid "Link copied to clipboard!"
+msgstr "リンクをクリップボードにコピーしました！"
+
+#: .\blog\templates\blogs\blog_list.html:10
+msgid "Blog & Insights"
+msgstr "ブログとインサイト"
+
+#: .\blog\templates\blogs\blog_list.html:12
+msgid "Discover translation tips, industry insights, and latest updates"
+msgstr "翻訳のコツ、業界のインサイト、最新のアップデートを発見"
+
+#: .\blog\templates\blogs\blog_list.html:30
+msgid "Search blog posts..."
+msgstr "ブログ記事を検索..."
+
+#: .\blog\templates\blogs\blog_list.html:38
+msgid "Latest"
+msgstr "最新"
+
+#: .\blog\templates\blogs\blog_list.html:42
+msgid "Popular"
+msgstr "人気"
+
+#: .\blog\templates\blogs\blog_list.html:101
+msgid "Read More"
+msgstr "続きを読む"
+
+#: .\blog\templates\blogs\blog_list.html:124
+msgid "Blog pagination"
+msgstr "ブログページネーション"
+
+#: .\blog\templates\blogs\blog_list.html:176
+msgid "No Blog Posts Yet"
+msgstr "まだブログ記事がありません"
+
+#: .\blog\templates\blogs\blog_list.html:178
+msgid "We're working on creating amazing content for you. Check back soon!"
+msgstr "素晴らしいコンテンツを作成しています。もうすぐチェックしてください！"
+
+#: .\blog\templates\blogs\blog_list.html:181
+msgid "Back to Home"
+msgstr "ホームに戻る"
+
+#: .\blog\templates\blogs\blog_list.html:196
+msgid "Stay Updated"
+msgstr "最新情報をチェック"
+
+#: .\blog\templates\blogs\blog_list.html:198
+msgid ""
+"Subscribe to our newsletter for the latest translation tips and industry "
+"insights."
+msgstr "最新の翻訳のコツと業界のインサイトをニュースレターで購読してください。"
+
+#: .\blog\templates\blogs\blog_list.html:204
+msgid "Enter your email address"
+msgstr "メールアドレスを入力してください"
+
+#: .\blog\templates\blogs\blog_list.html:207
+msgid "Subscribe"
+msgstr "購読"
+
+#: .\blog\templates\blogs\blog_list.html:519
+msgid "Please enter your email address"
+msgstr "メールアドレスを入力してください"
+
+#: .\blog\templates\blogs\blog_list.html:524
+msgid "Please enter a valid email address"
+msgstr "有効なメールアドレスを入力してください"
+
+#: .\blog\templates\blogs\blog_list.html:531
+msgid "Subscribing..."
+msgstr "購読中..."
+
+#: .\blog\templates\blogs\blog_list.html:538
+msgid "Successfully subscribed to newsletter!"
+msgstr "ニュースレターの購読に成功しました！"
+
+#: .\blog\templates\blogs\blog_list.html:578
+msgid "No posts found"
+msgstr "記事が見つかりません"
+
+#: .\blog\templates\blogs\blog_list.html:579
+msgid "Try adjusting your search terms"
+msgstr "検索語句を調整してみてください"
+
+#: .\documents\templates\documents\history.html:4
+msgid "Translation History - Transfile"
+msgstr "翻訳履歴 - Transfile"
+
+#: .\documents\templates\documents\history.html:9
+msgid "Translation History"
+msgstr "翻訳履歴"
+
+#: .\documents\templates\documents\history.html:10
+msgid "View and manage your translated documents"
+msgstr "翻訳済みドキュメントの表示と管理"
+
+#: .\documents\templates\documents\history.html:35
+#: .\documents\templates\documents\history.html:39
+msgid "Download"
+msgstr "ダウンロード"
+
+#: .\documents\templates\documents\history.html:43
+msgid "Processing..."
+msgstr "処理中..."
+
+#: .\documents\templates\documents\history.html:61
+msgid "Completed"
+msgstr "完了"
+
+#: .\documents\templates\documents\history.html:63
+msgid "Processing"
+msgstr "処理中"
+
+#: .\documents\templates\documents\history.html:65
+msgid "Failed"
+msgstr "失敗"
+
+#: .\documents\templates\documents\history.html:67
+msgid "Pending"
+msgstr "保留中"
+
+#: .\documents\templates\documents\history.html:82
+msgid "No Documents Yet"
+msgstr "まだドキュメントがありません"
+
+#: .\documents\templates\documents\history.html:83
+msgid "You haven't translated any documents yet."
+msgstr "まだドキュメントを翻訳していません。"
+
+#: .\documents\templates\documents\history.html:85
+msgid "Translate Your First Document"
+msgstr "最初のドキュメントを翻訳"
+
+#: .\documents\templates\documents\history.html:105
+msgid "Are you sure you want to delete this document?"
+msgstr "このドキュメントを削除してもよろしいですか？"
+
+#: .\templates\base.html:408
+msgid "Transfile"
+msgstr "Transfile"
+
+#: .\templates\base.html:420
+msgid "Blog"
+msgstr ""
+
+#: .\templates\base.html:428
+msgid "Translate"
+msgstr "翻訳"
+
+#: .\templates\base.html:433
+msgid "History"
+msgstr "履歴"
+
+#: .\templates\base.html:443
+msgid "Credits"
+msgstr "クレジット"
+
+#: .\templates\base.html:481
+msgid "Settings"
+msgstr "設定"
+
+#: .\templates\base.html:489
+msgid "Logout"
+msgstr "ログアウト"
+
+#: .\templates\base.html:497
+msgid "Login"
+msgstr "ログイン"
+
+#: .\templates\base.html:502
+msgid "Sign Up"
+msgstr "新規登録"
+
+#: .\templates\base.html:549
+msgid "Professional document translation powered by AI"
+msgstr "AIを活用したプロフェッショナルな文書翻訳"
+
+#: .\translate\templates\translate\home.html:5
+msgid "Home - Transfile"
+msgstr "ホーム - Transfile"
+
+#: .\translate\templates\translate\home.html:14
+msgid "Welcome to Transfile"
+msgstr "Transfileへようこそ"
+
+#: .\translate\templates\translate\home.html:17
+msgid ""
+"Professional document translation powered by cutting-edge AI technology.\n"
+"                    Transform your documents across multiple languages with "
+"precision and speed."
+msgstr ""
+"最先端のAI技術を活用したプロフェッショナルな文書翻訳。\n"
+"                    高精度かつ高速に、複数の言語間で文書を変換します。"
+
+#: .\translate\templates\translate\home.html:23
+msgid "Start Translating"
+msgstr "翻訳を開始"
+
+#: .\translate\templates\translate\home.html:26
+msgid "Learn More"
+msgstr "詳細を見る"
+
+#: .\translate\templates\translate\home.html:32
+msgid "Get Started Free"
+msgstr "無料で始める"
+
+#: .\translate\templates\translate\home.html:51
+msgid "Why Choose Transfile?"
+msgstr "なぜTransfileを選ぶのか？"
+
+#: .\translate\templates\translate\home.html:53
+msgid ""
+"Experience the future of document translation with our advanced AI-powered "
+"platform"
+msgstr "高度なAI搭載プラットフォームで、文書翻訳の未来を体験"
+
+#: .\translate\templates\translate\home.html:64
+msgid "Lightning Fast"
+msgstr "超高速"
+
+#: .\translate\templates\translate\home.html:66
+msgid ""
+"Advanced AI algorithms deliver professional translations in seconds, not "
+"hours.\n"
+"                        Process multiple documents simultaneously with our "
+"efficient queue system."
+msgstr ""
+"高度なAIアルゴリズムが、数時間ではなく数秒でプロフェッショナルな翻訳を提"
+"供。\n"
+"                        効率的なキューシステムで複数の文書を同時に処理。"
+
+#: .\translate\templates\translate\home.html:77
+msgid "Accurate & Reliable"
+msgstr "正確で信頼性の高い"
+
+#: .\translate\templates\translate\home.html:79
+msgid ""
+"Industry-leading accuracy powered by state-of-the-art machine learning "
+"models.\n"
+"                        Trusted by professionals worldwide for critical "
+"document translation."
+msgstr ""
+"最先端の機械学習モデルによる業界トップクラスの精度。\n"
+"                        重要な文書翻訳で世界中のプロフェッショナルから信頼。"
+
+#: .\translate\templates\translate\home.html:90
+msgid "Multiple Formats"
+msgstr "複数のフォーマット"
+
+#: .\translate\templates\translate\home.html:92
+msgid ""
+"Support for PDF, DOCX, XLSX, CSV and more. Preserve formatting,\n"
+"                        layouts, and styles while translating your important "
+"documents."
+msgstr ""
+"PDF、DOCX、XLSX、CSVなど多様なフォーマットに対応。\n"
+"                        重要な文書の翻訳時にフォーマット、レイアウト、スタイ"
+"ルを保持。"
+
+#: .\translate\templates\translate\home.html:103
+msgid "100+ Languages"
+msgstr "100以上の言語"
+
+#: .\translate\templates\translate\home.html:105
+msgid ""
+"Translate between over 100 languages with native-level fluency.\n"
+"                        From major world languages to regional dialects and "
+"technical terminology."
+msgstr ""
+"100以上の言語間でネイティブレベルの流暢な翻訳。\n"
+"                        主要な世界言語から地域の方言、専門用語まで対応。"
+
+#: .\translate\templates\translate\home.html:116
+msgid "Secure & Private"
+msgstr "安全でプライベート"
+
+#: .\translate\templates\translate\home.html:118
+msgid ""
+"Enterprise-grade security with end-to-end encryption. Your documents\n"
+"                        are automatically deleted after processing to ensure "
+"complete privacy."
+msgstr ""
+"エンドツーエンドの暗号化による企業レベルのセキュリティ。\n"
+"                        完全なプライバシーを確保するため、処理後の文書は自動"
+"的に削除されます。"
+
+#: .\translate\templates\translate\home.html:129
+msgid "Cloud-Powered"
+msgstr "クラウド対応"
+
+#: .\translate\templates\translate\home.html:131
+msgid ""
+"Access your translations from anywhere with our cloud-based platform.\n"
+"                        No software installation required - just upload and "
+"translate."
+msgstr ""
+"クラウドベースのプラットフォームで、どこからでも翻訳にアクセス。\n"
+"                        ソフトウェアのインストール不要 - アップロードして翻訳"
+"するだけ。"
+
+#: .\translate\templates\translate\home.html:145
+msgid "How It Works"
+msgstr "使い方"
+
+#: .\translate\templates\translate\home.html:147
+msgid "Get professional translations in just three simple steps"
+msgstr "3つの簡単なステップでプロフェッショナルな翻訳を取得"
+
+#: .\translate\templates\translate\home.html:162
+msgid "Upload Document"
+msgstr "ドキュメントをアップロード"
+
+#: .\translate\templates\translate\home.html:164
+msgid ""
+"Simply drag and drop your file or click to browse.\n"
+"                    We support all major document formats including PDF, "
+"Word, Excel, and more."
+msgstr ""
+"ファイルをドラッグ＆ドロップするか、クリックして参照。\n"
+"                    PDF、Word、Excelなど、主要な文書フォーマットに対応。"
+
+#: .\translate\templates\translate\home.html:178
+msgid "Select Languages"
+msgstr "言語を選択"
+
+#: .\translate\templates\translate\home.html:180
+msgid ""
+"Choose your source and target languages from our extensive list.\n"
+"                    Our AI automatically detects the source language if "
+"you're unsure."
+msgstr ""
+"豊富な言語リストから原語と目標言語を選択。\n"
+"                    不確かな場合は、AIが自動的に原語を検出します。"
+
+#: .\translate\templates\translate\home.html:191
+msgid "Download Result"
+msgstr "結果をダウンロード"
+
+#: .\translate\templates\translate\home.html:193
+msgid ""
+"Receive your professionally translated document in the same format.\n"
+"                    All formatting, images, and layouts are perfectly "
+"preserved."
+msgstr ""
+"プロフェッショナルに翻訳された文書を同じフォーマットで受け取り。\n"
+"                    すべてのフォーマット、画像、レイアウトが完全に保持されま"
+"す。"
+
+#: .\translate\templates\translate\home.html:208
+msgid "Ready to Transform Your Documents?"
+msgstr "文書の変換を始める準備はできましたか？"
+
+#: .\translate\templates\translate\home.html:210
+msgid ""
+"Join thousands of professionals who trust Transfile for their translation "
+"needs.\n"
+"                    Start your journey today and experience the power of AI-"
+"driven translation."
+msgstr ""
+"翻訳ニーズにTransfileを信頼する何千ものプロフェッショナルに参加。\n"
+"                    今日から始めて、AI駆動の翻訳の力を体験してください。"
+
+#: .\translate\templates\translate\home.html:215
+msgid "Upload Your First Document"
+msgstr "最初のドキュメントをアップロード"
+
+#: .\translate\templates\translate\home.html:220
+msgid "Start Free Trial"
+msgstr "無料トライアルを開始"
+
+#: .\translate\templates\translate\upload.html:4
+msgid "Upload & Translate - Transfile"
+msgstr "アップロード＆翻訳 - Transfile"
+
+#: .\translate\templates\translate\upload.html:9
+#: .\translate\templates\translate\upload.html:345
+msgid "Upload & Translate"
+msgstr "アップロード＆翻訳"
+
+#: .\translate\templates\translate\upload.html:10
+msgid ""
+"Upload your documents and get professional AI-powered translations instantly"
+msgstr ""
+"ドキュメントをアップロードして、AIを活用したプロフェッショナルな翻訳を即座に"
+"取得"
+
+#: .\translate\templates\translate\upload.html:267
+msgid "Document Translation"
+msgstr "文書翻訳"
+
+#: .\translate\templates\translate\upload.html:269
+msgid "Select your source and target languages, then upload your document"
+msgstr "原語と目標言語を選択し、文書をアップロード"
+
+#: .\translate\templates\translate\upload.html:279
+msgid "Source Language"
+msgstr "原語"
+
+#: .\translate\templates\translate\upload.html:282
+msgid "Choose source language..."
+msgstr "原語を選択..."
+
+#: .\translate\templates\translate\upload.html:283
+#: .\translate\templates\translate\upload.html:304
+msgid "🇹🇷 Turkish"
+msgstr "🇹🇷 トルコ語"
+
+#: .\translate\templates\translate\upload.html:284
+#: .\translate\templates\translate\upload.html:305
+msgid "🇺🇸 English"
+msgstr "🇺🇸 英語"
+
+#: .\translate\templates\translate\upload.html:285
+#: .\translate\templates\translate\upload.html:306
+msgid "🇪🇸 Spanish"
+msgstr "🇪🇸 スペイン語"
+
+#: .\translate\templates\translate\upload.html:286
+#: .\translate\templates\translate\upload.html:307
+msgid "🇫🇷 French"
+msgstr "🇫🇷 フランス語"
+
+#: .\translate\templates\translate\upload.html:287
+#: .\translate\templates\translate\upload.html:308
+msgid "🇩🇪 German"
+msgstr "🇩🇪 ドイツ語"
+
+#: .\translate\templates\translate\upload.html:288
+#: .\translate\templates\translate\upload.html:309
+msgid "🇮🇹 Italian"
+msgstr "🇮🇹 イタリア語"
+
+#: .\translate\templates\translate\upload.html:289
+#: .\translate\templates\translate\upload.html:310
+msgid "🇵🇹 Portuguese"
+msgstr "🇵🇹 ポルトガル語"
+
+#: .\translate\templates\translate\upload.html:290
+#: .\translate\templates\translate\upload.html:311
+msgid "🇷🇺 Russian"
+msgstr "🇷🇺 ロシア語"
+
+#: .\translate\templates\translate\upload.html:291
+#: .\translate\templates\translate\upload.html:312
+msgid "🇯🇵 Japanese"
+msgstr "🇯🇵 日本語"
+
+#: .\translate\templates\translate\upload.html:292
+#: .\translate\templates\translate\upload.html:313
+msgid "🇰🇷 Korean"
+msgstr "🇰🇷 韓国語"
+
+#: .\translate\templates\translate\upload.html:293
+#: .\translate\templates\translate\upload.html:314
+msgid "🇨🇳 Chinese"
+msgstr "🇨🇳 中国語"
+
+#: .\translate\templates\translate\upload.html:294
+msgid "🔍 Auto-detect"
+msgstr "🔍 自動検出"
+
+#: .\translate\templates\translate\upload.html:300
+msgid "Target Language"
+msgstr "目標言語"
+
+#: .\translate\templates\translate\upload.html:303
+msgid "Choose target language..."
+msgstr "目標言語を選択..."
+
+#: .\translate\templates\translate\upload.html:325
+msgid "Drag and drop your document here"
+msgstr "ここにドキュメントをドラッグ＆ドロップ"
+
+#: .\translate\templates\translate\upload.html:326
+msgid "or click to browse files"
+msgstr "またはクリックしてファイルを参照"
+
+#: .\translate\templates\translate\upload.html:331
+msgid "Choose File"
+msgstr "ファイルを選択"
+
+#: .\translate\templates\translate\upload.html:335
+msgid "Supported formats: PDF, XLSX, DOCX, CSV, (Max 25MB)"
+msgstr "対応フォーマット：PDF、XLSX、DOCX、CSV（最大25MB）"
+
+#: .\translate\templates\translate\upload.html:416
+msgid "Unsupported file type. Allowed types: PDF, DOCX, XLSX, CSV"
+msgstr "未対応のファイル形式。対応形式：PDF、DOCX、XLSX、CSV"
+
+#: .\translate\templates\translate\upload.html:436
+msgid "Size:"
+msgstr "サイズ："
+
+#: .\translate\templates\translate\upload.html:440
+msgid "Type:"
+msgstr "種類："
+
+#: .\translate\templates\translate\upload.html:460
+msgid "Source and target languages must be different"
+msgstr "原語と目標言語は異なる必要があります"
+
+#: .\translate\templates\translate\upload.html:560
+msgid "Please select a file first"
+msgstr "最初にファイルを選択してください"
+
+#: .\translate\templates\translate\upload.html:568
+msgid "Please select both source and target languages"
+msgstr "原語と目標言語の両方を選択してください"
+
+#: .\translate\templates\translate\upload.html:619
+msgid "No file path received from server"
+msgstr "サーバーからファイルパスを受信できませんでした"
+
+#: .\translate\templates\translate\upload.html:622
+msgid "Upload failed"
+msgstr "アップロード失敗"
+
+#: .\translate\templates\translate\upload.html:633
+msgid "Network error occurred"
+msgstr "ネットワークエラーが発生しました"
+
+#: .\translate\templates\translate\upload.html:642
+msgid "Upload failed:"
+msgstr "アップロード失敗："
+
+#: .\translate\templates\translate\upload.html:737
+msgid "Chunk upload failed"
+msgstr "チャンクのアップロードに失敗"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "Chunk"
+msgstr "チャンク"
+
+#: .\translate\templates\translate\upload.html:752
+msgid "failed after"
+msgstr "失敗："
+
+#: .\translate\templates\translate\upload.html:752
+msgid "attempts:"
+msgstr "試行回数："
+
+#: .\translate\templates\translate\upload.html:777
+msgid "Starting translation..."
+msgstr "翻訳を開始中..."
+
+#: .\translate\templates\translate\upload.html:796
+msgid "Translation failed"
+msgstr "翻訳失敗"
+
+#: .\translate\templates\translate\upload.html:807
+msgid "Translation started successfully!"
+msgstr "翻訳が正常に開始されました！"
+
+#: .\translate\templates\translate\upload.html:810
+msgid "No task ID received"
+msgstr "タスクIDを受信できませんでした"
+
+#: .\translate\templates\translate\upload.html:814
+#: .\translate\templates\translate\upload.html:850
+msgid "Translation failed:"
+msgstr "翻訳失敗："
+
+#: .\translate\templates\translate\upload.html:838
+#: .\translate\templates\translate\upload.html:846
+msgid "Translation completed successfully!"
+msgstr "翻訳が正常に完了しました！"
+
+#: .\translate\templates\translate\upload.html:841
+msgid "Download Translated File"
+msgstr "翻訳済みファイルをダウンロード"
+
+#: .\translate\templates\translate\upload.html:850
+msgid "Unknown error"
+msgstr "不明なエラー"
+
+#: .\translate\templates\translate\upload.html:856
+msgid "Translating..."
+msgstr "翻訳中..."
+
+#: .\translate\templates\translate\upload.html:863
+msgid "Error checking translation status:"
+msgstr "翻訳状態の確認エラー："
+
+#~ msgid "1,234 views"
+#~ msgstr "1,234回閲覧"
+
+#~ msgid "Table of Contents"
+#~ msgstr "目次"
+
+#~ msgid "Share this article"
+#~ msgstr "この記事をシェア"
+
+#~ msgid "Previous"
+#~ msgstr "前へ"
+
+#~ msgid "Previous Article Title"
+#~ msgstr "前の記事のタイトル"
+
+#~ msgid "All Posts"
+#~ msgstr "すべての記事"
+
+#~ msgid "Next"
+#~ msgstr "次へ"
+
+#~ msgid "Next Article Title"
+#~ msgstr "次の記事のタイトル"
+
+#~ msgid "Related Articles"
+#~ msgstr "関連記事"
+
+#~ msgid "Sample Related Article Title"
+#~ msgstr "関連記事のサンプルタイトル"
+
+#~ msgid "March 15, 2024"
+#~ msgstr "2024年3月15日"
+
+#~ msgid "Another Related Article"
+#~ msgstr "別の関連記事"
+
+#~ msgid "March 10, 2024"
+#~ msgstr "2024年3月10日"
+
+#~ msgid "Third Related Article"
+#~ msgstr "3番目の関連記事"
+
+#~ msgid "March 5, 2024"
+#~ msgstr "2024年3月5日"
+
+#~ msgid "Home"
+#~ msgstr "ホーム"
