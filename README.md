@@ -1,13 +1,6 @@
 ![Alt text](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3dudnVvNW41ZTZlZjNxdDJrdXB2a3JpdzJoOXZrY3dydW8yaXJlMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qd2Yjm9Ocv1eC6r6Ym/giphy.gif)
 
 
-## Admin login
-
-- **URL**: `www.transfile.com.tr/pikachu`
-- **Username**: `admin`
-- **Password**: `vcxaQPUgBidCBi8`
-
-
 ## Documents
 
 - [Getting started](docs/getting_started.md)
